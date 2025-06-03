@@ -1,0 +1,25 @@
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px 0
+}
+
+%thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+.img-thumbnail {
+    @extend %thumbnail;
+}
+
+.img-avatar {
+    @extend %thumbnail;
+    border-radius: 50%;
+}
+
+.img-round {
+    border-radius: 100%;
+}

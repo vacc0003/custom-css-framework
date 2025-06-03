@@ -1,0 +1,11 @@
+@use '../variables/sizing';
+
+.container {
+  width: 100%;
+  padding: map-get(sizing.$spacing, 4);
+}
+
+section {
+  padding-top: map-get(sizing.$spacing, 3);
+  padding-bottom: map-get(sizing.$spacing, 3);
+}

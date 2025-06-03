@@ -1,0 +1,74 @@
+@use './theme' as theme;
+@use './sizing' as sizing;
+
+$font-family-body: "Jost", sans-serif;
+$font-family-heading: "Jost", sans-serif;
+
+@each $key, $value in sizing.$sizes {
+  .text-#{$key} {
+    font-size: $value;
+  }
+}
+
+$font-weight-black: 900;
+$font-weight-extrabold: 800;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-extralight: 200;
+$font-weight-thin: 100;
+
+body {
+    font-family: $font-family-body;
+    font-weight: $font-weight-light;
+    line-height: 1.5;
+    font-size: map-get(sizing.$sizes,'md');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-heading;
+}
+
+h1 {
+    font-weight: $font-weight-black;
+    font-size: map-get(sizing.$sizes,'3xl');
+    line-height: 1.2;
+}
+
+h2 {
+    font-weight: $font-weight-extrabold;
+    font-size: map-get(sizing.$sizes,'2xl');
+    line-height: 1.2;
+}
+
+h3 {
+    font-weight: $font-weight-bold;
+    font-size: map-get(sizing.$sizes,'xl');
+    line-height: 1.2;
+}
+
+h4 {
+    font-weight: $font-weight-semibold;
+    font-size: map-get(sizing.$sizes,'lg');
+    line-height: 1.2;
+}
+
+h5 {
+    font-weight: $font-weight-medium;
+    font-size: map-get(sizing.$sizes,'md');
+    line-height: 1.2;
+}
+
+h6 {
+    font-weight: $font-weight-regular;
+    font-size: map-get(sizing.$sizes,'sm');
+    line-height: 1.2;
+}
+
+@each $name, $color in theme.$theme {
+  .text-#{$name} {
+    color: #{$color};
+  }
+}

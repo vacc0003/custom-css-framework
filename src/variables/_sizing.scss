@@ -1,0 +1,122 @@
+$spacing: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 2rem,
+  6: 2.5rem,
+  7: 3rem,
+  8: 4rem,
+  9: 5rem,
+  10: 6rem,
+  11: 7rem,
+  12: 8rem
+);
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@each $key, $value in $spacing {
+
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+  
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+  
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .w-#{$key} {
+    width: $value;
+  }
+
+  .h-#{$key} {
+    height: $value;
+  }
+
+  .min-w-#{$key} {
+    min-width: $value;
+  }
+
+  .min-h-#{$key} {  
+    min-height: $value;
+  }
+
+  .max-w-#{$key} {
+    max-width: $value;
+  }
+}
+
+$sizes: (
+  xs: 0.75rem,
+  sm: 1rem,
+  md: 1.25rem,
+  lg: 1.875rem,
+  xl: 2.25rem,
+  '2xl': 3rem,
+  '3xl': 4rem,
+  '4xl': 5rem,
+  '5xl': 6rem,
+  '6xl': 7rem,
+  '7xl': 8rem
+);

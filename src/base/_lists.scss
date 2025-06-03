@@ -1,0 +1,17 @@
+@use '../variables/theme';
+@use '../variables/sizing';
+
+ul, ol, dl {
+    padding-left: map-get(sizing.$spacing, 4);
+    padding-top: map-get(sizing.$spacing, 3);
+    padding-bottom: map-get(sizing.$spacing, 3);
+}
+
+ul {
+    list-style-type: theme.$list-bullet;
+}
+
+ol {
+    list-style-type: theme.$list-number;
+}
+
