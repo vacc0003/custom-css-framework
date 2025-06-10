@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://rsms.me/inter/inter.css?features=cv11");
 /***
     The new CSS reset - version 1.11.3 (last updated 25.08.2024)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -89,6 +89,18 @@ meter {
   display: none;
 }
 
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --border-color: #F2F2F3;
+}
+
+[data-theme=dark] {
+  --bg-color: #141414;
+  --text-color: #f1f5f9;
+  --border-color: #1E1F29;
+}
+
 .bg-primary {
   background-color: #00008B;
 }
@@ -128,1043 +140,1047 @@ meter {
 }
 
 .m-0 {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .mt-0 {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .mb-0 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .ml-0 {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .mr-0 {
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 
 .my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .mx-0 {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .p-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .pt-0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 
 .pb-0 {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 
 .pl-0 {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 
 .pr-0 {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 
 .py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .px-0 {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .w-0 {
-  width: 0;
+  width: 0 !important;
 }
 
 .h-0 {
-  height: 0;
+  height: 0 !important;
 }
 
 .min-w-0 {
-  min-width: 0;
+  min-width: 0 !important;
 }
 
 .min-h-0 {
-  min-height: 0;
+  min-height: 0 !important;
 }
 
 .max-w-0 {
-  max-width: 0;
+  max-width: 0 !important;
 }
 
 .m-1 {
-  margin: 0.25rem;
+  margin: 0.25rem !important;
 }
 
 .mt-1 {
-  margin-top: 0.25rem;
+  margin-top: 0.25rem !important;
 }
 
 .mb-1 {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem !important;
 }
 
 .ml-1 {
-  margin-left: 0.25rem;
+  margin-left: 0.25rem !important;
 }
 
 .mr-1 {
-  margin-right: 0.25rem;
+  margin-right: 0.25rem !important;
 }
 
 .my-1 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
 }
 
 .mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+  margin-left: 0.25rem !important;
+  margin-right: 0.25rem !important;
 }
 
 .p-1 {
-  padding: 0.25rem;
+  padding: 0.25rem !important;
 }
 
 .pt-1 {
-  padding-top: 0.25rem;
+  padding-top: 0.25rem !important;
 }
 
 .pb-1 {
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.25rem !important;
 }
 
 .pl-1 {
-  padding-left: 0.25rem;
+  padding-left: 0.25rem !important;
 }
 
 .pr-1 {
-  padding-right: 0.25rem;
+  padding-right: 0.25rem !important;
 }
 
 .py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
 }
 
 .px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
 }
 
 .w-1 {
-  width: 0.25rem;
+  width: 0.25rem !important;
 }
 
 .h-1 {
-  height: 0.25rem;
+  height: 0.25rem !important;
 }
 
 .min-w-1 {
-  min-width: 0.25rem;
+  min-width: 0.25rem !important;
 }
 
 .min-h-1 {
-  min-height: 0.25rem;
+  min-height: 0.25rem !important;
 }
 
 .max-w-1 {
-  max-width: 0.25rem;
+  max-width: 0.25rem !important;
 }
 
 .m-2 {
-  margin: 0.5rem;
+  margin: 0.5rem !important;
 }
 
 .mt-2 {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem !important;
 }
 
 .mb-2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
 .ml-2 {
-  margin-left: 0.5rem;
+  margin-left: 0.5rem !important;
 }
 
 .mr-2 {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem !important;
 }
 
 .my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
 }
 
 .p-2 {
-  padding: 0.5rem;
+  padding: 0.5rem !important;
 }
 
 .pt-2 {
-  padding-top: 0.5rem;
+  padding-top: 0.5rem !important;
 }
 
 .pb-2 {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem !important;
 }
 
 .pl-2 {
-  padding-left: 0.5rem;
+  padding-left: 0.5rem !important;
 }
 
 .pr-2 {
-  padding-right: 0.5rem;
+  padding-right: 0.5rem !important;
 }
 
 .py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .w-2 {
-  width: 0.5rem;
+  width: 0.5rem !important;
 }
 
 .h-2 {
-  height: 0.5rem;
+  height: 0.5rem !important;
 }
 
 .min-w-2 {
-  min-width: 0.5rem;
+  min-width: 0.5rem !important;
 }
 
 .min-h-2 {
-  min-height: 0.5rem;
+  min-height: 0.5rem !important;
 }
 
 .max-w-2 {
-  max-width: 0.5rem;
+  max-width: 0.5rem !important;
 }
 
 .m-3 {
-  margin: 1rem;
+  margin: 1rem !important;
 }
 
 .mt-3 {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .mb-3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .ml-3 {
-  margin-left: 1rem;
+  margin-left: 1rem !important;
 }
 
 .mr-3 {
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
 
 .my-3 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .mx-3 {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
 }
 
 .p-3 {
-  padding: 1rem;
+  padding: 1rem !important;
 }
 
 .pt-3 {
-  padding-top: 1rem;
+  padding-top: 1rem !important;
 }
 
 .pb-3 {
-  padding-bottom: 1rem;
+  padding-bottom: 1rem !important;
 }
 
 .pl-3 {
-  padding-left: 1rem;
+  padding-left: 1rem !important;
 }
 
 .pr-3 {
-  padding-right: 1rem;
+  padding-right: 1rem !important;
 }
 
 .py-3 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .px-3 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 .w-3 {
-  width: 1rem;
+  width: 1rem !important;
 }
 
 .h-3 {
-  height: 1rem;
+  height: 1rem !important;
 }
 
 .min-w-3 {
-  min-width: 1rem;
+  min-width: 1rem !important;
 }
 
 .min-h-3 {
-  min-height: 1rem;
+  min-height: 1rem !important;
 }
 
 .max-w-3 {
-  max-width: 1rem;
+  max-width: 1rem !important;
 }
 
 .m-4 {
-  margin: 1.5rem;
+  margin: 1.5rem !important;
 }
 
 .mt-4 {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 
 .mb-4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .ml-4 {
-  margin-left: 1.5rem;
+  margin-left: 1.5rem !important;
 }
 
 .mr-4 {
-  margin-right: 1.5rem;
+  margin-right: 1.5rem !important;
 }
 
 .my-4 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .mx-4 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
 }
 
 .p-4 {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
 }
 
 .pt-4 {
-  padding-top: 1.5rem;
+  padding-top: 1.5rem !important;
 }
 
 .pb-4 {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem !important;
 }
 
 .pl-4 {
-  padding-left: 1.5rem;
+  padding-left: 1.5rem !important;
 }
 
 .pr-4 {
-  padding-right: 1.5rem;
+  padding-right: 1.5rem !important;
 }
 
 .py-4 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .px-4 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 .w-4 {
-  width: 1.5rem;
+  width: 1.5rem !important;
 }
 
 .h-4 {
-  height: 1.5rem;
+  height: 1.5rem !important;
 }
 
 .min-w-4 {
-  min-width: 1.5rem;
+  min-width: 1.5rem !important;
 }
 
 .min-h-4 {
-  min-height: 1.5rem;
+  min-height: 1.5rem !important;
 }
 
 .max-w-4 {
-  max-width: 1.5rem;
+  max-width: 1.5rem !important;
 }
 
 .m-5 {
-  margin: 2rem;
+  margin: 2rem !important;
 }
 
 .mt-5 {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .mb-5 {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .ml-5 {
-  margin-left: 2rem;
+  margin-left: 2rem !important;
 }
 
 .mr-5 {
-  margin-right: 2rem;
+  margin-right: 2rem !important;
 }
 
 .my-5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .mx-5 {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
 }
 
 .p-5 {
-  padding: 2rem;
+  padding: 2rem !important;
 }
 
 .pt-5 {
-  padding-top: 2rem;
+  padding-top: 2rem !important;
 }
 
 .pb-5 {
-  padding-bottom: 2rem;
+  padding-bottom: 2rem !important;
 }
 
 .pl-5 {
-  padding-left: 2rem;
+  padding-left: 2rem !important;
 }
 
 .pr-5 {
-  padding-right: 2rem;
+  padding-right: 2rem !important;
 }
 
 .py-5 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .px-5 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
 
 .w-5 {
-  width: 2rem;
+  width: 2rem !important;
 }
 
 .h-5 {
-  height: 2rem;
+  height: 2rem !important;
 }
 
 .min-w-5 {
-  min-width: 2rem;
+  min-width: 2rem !important;
 }
 
 .min-h-5 {
-  min-height: 2rem;
+  min-height: 2rem !important;
 }
 
 .max-w-5 {
-  max-width: 2rem;
+  max-width: 2rem !important;
 }
 
 .m-6 {
-  margin: 2.5rem;
+  margin: 2.5rem !important;
 }
 
 .mt-6 {
-  margin-top: 2.5rem;
+  margin-top: 2.5rem !important;
 }
 
 .mb-6 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem !important;
 }
 
 .ml-6 {
-  margin-left: 2.5rem;
+  margin-left: 2.5rem !important;
 }
 
 .mr-6 {
-  margin-right: 2.5rem;
+  margin-right: 2.5rem !important;
 }
 
 .my-6 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
 }
 
 .mx-6 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
+  margin-left: 2.5rem !important;
+  margin-right: 2.5rem !important;
 }
 
 .p-6 {
-  padding: 2.5rem;
+  padding: 2.5rem !important;
 }
 
 .pt-6 {
-  padding-top: 2.5rem;
+  padding-top: 2.5rem !important;
 }
 
 .pb-6 {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.5rem !important;
 }
 
 .pl-6 {
-  padding-left: 2.5rem;
+  padding-left: 2.5rem !important;
 }
 
 .pr-6 {
-  padding-right: 2.5rem;
+  padding-right: 2.5rem !important;
 }
 
 .py-6 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
 }
 
 .px-6 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
 }
 
 .w-6 {
-  width: 2.5rem;
+  width: 2.5rem !important;
 }
 
 .h-6 {
-  height: 2.5rem;
+  height: 2.5rem !important;
 }
 
 .min-w-6 {
-  min-width: 2.5rem;
+  min-width: 2.5rem !important;
 }
 
 .min-h-6 {
-  min-height: 2.5rem;
+  min-height: 2.5rem !important;
 }
 
 .max-w-6 {
-  max-width: 2.5rem;
+  max-width: 2.5rem !important;
 }
 
 .m-7 {
-  margin: 3rem;
+  margin: 3rem !important;
 }
 
 .mt-7 {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 
 .mb-7 {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .ml-7 {
-  margin-left: 3rem;
+  margin-left: 3rem !important;
 }
 
 .mr-7 {
-  margin-right: 3rem;
+  margin-right: 3rem !important;
 }
 
 .my-7 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .mx-7 {
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
 }
 
 .p-7 {
-  padding: 3rem;
+  padding: 3rem !important;
 }
 
 .pt-7 {
-  padding-top: 3rem;
+  padding-top: 3rem !important;
 }
 
 .pb-7 {
-  padding-bottom: 3rem;
+  padding-bottom: 3rem !important;
 }
 
 .pl-7 {
-  padding-left: 3rem;
+  padding-left: 3rem !important;
 }
 
 .pr-7 {
-  padding-right: 3rem;
+  padding-right: 3rem !important;
 }
 
 .py-7 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .px-7 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
 .w-7 {
-  width: 3rem;
+  width: 3rem !important;
 }
 
 .h-7 {
-  height: 3rem;
+  height: 3rem !important;
 }
 
 .min-w-7 {
-  min-width: 3rem;
+  min-width: 3rem !important;
 }
 
 .min-h-7 {
-  min-height: 3rem;
+  min-height: 3rem !important;
 }
 
 .max-w-7 {
-  max-width: 3rem;
+  max-width: 3rem !important;
 }
 
 .m-8 {
-  margin: 4rem;
+  margin: 4rem !important;
 }
 
 .mt-8 {
-  margin-top: 4rem;
+  margin-top: 4rem !important;
 }
 
 .mb-8 {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .ml-8 {
-  margin-left: 4rem;
+  margin-left: 4rem !important;
 }
 
 .mr-8 {
-  margin-right: 4rem;
+  margin-right: 4rem !important;
 }
 
 .my-8 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
 }
 
 .mx-8 {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 4rem !important;
+  margin-right: 4rem !important;
 }
 
 .p-8 {
-  padding: 4rem;
+  padding: 4rem !important;
 }
 
 .pt-8 {
-  padding-top: 4rem;
+  padding-top: 4rem !important;
 }
 
 .pb-8 {
-  padding-bottom: 4rem;
+  padding-bottom: 4rem !important;
 }
 
 .pl-8 {
-  padding-left: 4rem;
+  padding-left: 4rem !important;
 }
 
 .pr-8 {
-  padding-right: 4rem;
+  padding-right: 4rem !important;
 }
 
 .py-8 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
 }
 
 .px-8 {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
 }
 
 .w-8 {
-  width: 4rem;
+  width: 4rem !important;
 }
 
 .h-8 {
-  height: 4rem;
+  height: 4rem !important;
 }
 
 .min-w-8 {
-  min-width: 4rem;
+  min-width: 4rem !important;
 }
 
 .min-h-8 {
-  min-height: 4rem;
+  min-height: 4rem !important;
 }
 
 .max-w-8 {
-  max-width: 4rem;
+  max-width: 4rem !important;
 }
 
 .m-9 {
-  margin: 5rem;
+  margin: 5rem !important;
 }
 
 .mt-9 {
-  margin-top: 5rem;
+  margin-top: 5rem !important;
 }
 
 .mb-9 {
-  margin-bottom: 5rem;
+  margin-bottom: 5rem !important;
 }
 
 .ml-9 {
-  margin-left: 5rem;
+  margin-left: 5rem !important;
 }
 
 .mr-9 {
-  margin-right: 5rem;
+  margin-right: 5rem !important;
 }
 
 .my-9 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
 }
 
 .mx-9 {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 
 .p-9 {
-  padding: 5rem;
+  padding: 5rem !important;
 }
 
 .pt-9 {
-  padding-top: 5rem;
+  padding-top: 5rem !important;
 }
 
 .pb-9 {
-  padding-bottom: 5rem;
+  padding-bottom: 5rem !important;
 }
 
 .pl-9 {
-  padding-left: 5rem;
+  padding-left: 5rem !important;
 }
 
 .pr-9 {
-  padding-right: 5rem;
+  padding-right: 5rem !important;
 }
 
 .py-9 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
 }
 
 .px-9 {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 
 .w-9 {
-  width: 5rem;
+  width: 5rem !important;
 }
 
 .h-9 {
-  height: 5rem;
+  height: 5rem !important;
 }
 
 .min-w-9 {
-  min-width: 5rem;
+  min-width: 5rem !important;
 }
 
 .min-h-9 {
-  min-height: 5rem;
+  min-height: 5rem !important;
 }
 
 .max-w-9 {
-  max-width: 5rem;
+  max-width: 5rem !important;
 }
 
 .m-10 {
-  margin: 6rem;
+  margin: 6rem !important;
 }
 
 .mt-10 {
-  margin-top: 6rem;
+  margin-top: 6rem !important;
 }
 
 .mb-10 {
-  margin-bottom: 6rem;
+  margin-bottom: 6rem !important;
 }
 
 .ml-10 {
-  margin-left: 6rem;
+  margin-left: 6rem !important;
 }
 
 .mr-10 {
-  margin-right: 6rem;
+  margin-right: 6rem !important;
 }
 
 .my-10 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
 }
 
 .mx-10 {
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 6rem !important;
+  margin-right: 6rem !important;
 }
 
 .p-10 {
-  padding: 6rem;
+  padding: 6rem !important;
 }
 
 .pt-10 {
-  padding-top: 6rem;
+  padding-top: 6rem !important;
 }
 
 .pb-10 {
-  padding-bottom: 6rem;
+  padding-bottom: 6rem !important;
 }
 
 .pl-10 {
-  padding-left: 6rem;
+  padding-left: 6rem !important;
 }
 
 .pr-10 {
-  padding-right: 6rem;
+  padding-right: 6rem !important;
 }
 
 .py-10 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
 }
 
 .px-10 {
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
 }
 
 .w-10 {
-  width: 6rem;
+  width: 6rem !important;
 }
 
 .h-10 {
-  height: 6rem;
+  height: 6rem !important;
 }
 
 .min-w-10 {
-  min-width: 6rem;
+  min-width: 6rem !important;
 }
 
 .min-h-10 {
-  min-height: 6rem;
+  min-height: 6rem !important;
 }
 
 .max-w-10 {
-  max-width: 6rem;
+  max-width: 6rem !important;
 }
 
 .m-11 {
-  margin: 7rem;
+  margin: 7rem !important;
 }
 
 .mt-11 {
-  margin-top: 7rem;
+  margin-top: 7rem !important;
 }
 
 .mb-11 {
-  margin-bottom: 7rem;
+  margin-bottom: 7rem !important;
 }
 
 .ml-11 {
-  margin-left: 7rem;
+  margin-left: 7rem !important;
 }
 
 .mr-11 {
-  margin-right: 7rem;
+  margin-right: 7rem !important;
 }
 
 .my-11 {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
+  margin-top: 7rem !important;
+  margin-bottom: 7rem !important;
 }
 
 .mx-11 {
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: 7rem !important;
+  margin-right: 7rem !important;
 }
 
 .p-11 {
-  padding: 7rem;
+  padding: 7rem !important;
 }
 
 .pt-11 {
-  padding-top: 7rem;
+  padding-top: 7rem !important;
 }
 
 .pb-11 {
-  padding-bottom: 7rem;
+  padding-bottom: 7rem !important;
 }
 
 .pl-11 {
-  padding-left: 7rem;
+  padding-left: 7rem !important;
 }
 
 .pr-11 {
-  padding-right: 7rem;
+  padding-right: 7rem !important;
 }
 
 .py-11 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 7rem !important;
+  padding-bottom: 7rem !important;
 }
 
 .px-11 {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 7rem !important;
+  padding-right: 7rem !important;
 }
 
 .w-11 {
-  width: 7rem;
+  width: 7rem !important;
 }
 
 .h-11 {
-  height: 7rem;
+  height: 7rem !important;
 }
 
 .min-w-11 {
-  min-width: 7rem;
+  min-width: 7rem !important;
 }
 
 .min-h-11 {
-  min-height: 7rem;
+  min-height: 7rem !important;
 }
 
 .max-w-11 {
-  max-width: 7rem;
+  max-width: 7rem !important;
 }
 
 .m-12 {
-  margin: 8rem;
+  margin: 8rem !important;
 }
 
 .mt-12 {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .mb-12 {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .ml-12 {
-  margin-left: 8rem;
+  margin-left: 8rem !important;
 }
 
 .mr-12 {
-  margin-right: 8rem;
+  margin-right: 8rem !important;
 }
 
 .my-12 {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-top: 8rem !important;
+  margin-bottom: 8rem !important;
 }
 
 .mx-12 {
-  margin-left: 8rem;
-  margin-right: 8rem;
+  margin-left: 8rem !important;
+  margin-right: 8rem !important;
 }
 
 .p-12 {
-  padding: 8rem;
+  padding: 8rem !important;
 }
 
 .pt-12 {
-  padding-top: 8rem;
+  padding-top: 8rem !important;
 }
 
 .pb-12 {
-  padding-bottom: 8rem;
+  padding-bottom: 8rem !important;
 }
 
 .pl-12 {
-  padding-left: 8rem;
+  padding-left: 8rem !important;
 }
 
 .pr-12 {
-  padding-right: 8rem;
+  padding-right: 8rem !important;
 }
 
 .py-12 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
 }
 
 .px-12 {
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 8rem !important;
+  padding-right: 8rem !important;
 }
 
 .w-12 {
-  width: 8rem;
+  width: 8rem !important;
 }
 
 .h-12 {
-  height: 8rem;
+  height: 8rem !important;
 }
 
 .min-w-12 {
-  min-width: 8rem;
+  min-width: 8rem !important;
 }
 
 .min-h-12 {
-  min-height: 8rem;
+  min-height: 8rem !important;
 }
 
 .max-w-12 {
-  max-width: 8rem;
+  max-width: 8rem !important;
+}
+
+html {
+  font-feature-settings: "cv11";
 }
 
 .text-xs {
@@ -1172,90 +1188,91 @@ meter {
 }
 
 .text-sm {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
-.text-md {
-  font-size: 1.25rem;
+.text-base {
+  font-size: 1rem;
 }
 
 .text-lg {
-  font-size: 1.875rem;
+  font-size: 1.125rem;
 }
 
 .text-xl {
-  font-size: 2.25rem;
+  font-size: 1.25rem;
 }
 
 .text-2xl {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .text-3xl {
-  font-size: 4rem;
+  font-size: 1.875rem;
 }
 
 .text-4xl {
-  font-size: 5rem;
+  font-size: 2.25rem;
 }
 
 .text-5xl {
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 .text-6xl {
-  font-size: 7rem;
+  font-size: 3.75rem;
 }
 
 .text-7xl {
-  font-size: 8rem;
+  font-size: 4.5rem;
 }
 
 body {
-  font-family: "Jost", sans-serif;
-  font-weight: 300;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
   line-height: 1.5;
-  font-size: 1.25rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: 4rem;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 3rem;
   line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 h2 {
-  font-weight: 800;
-  font-size: 3rem;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 600;
+  font-size: 2.25rem;
   line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 2.25rem;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  font-size: 1.875rem;
   line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 h4 {
-  font-weight: 600;
-  font-size: 1.875rem;
-  line-height: 1.2;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 
 h5 {
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-
-h6 {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.2;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 200;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 
 .text-primary {
@@ -1286,9 +1303,119 @@ h6 {
   color: #000000;
 }
 
-.container {
+.container, .nav-container {
+  max-width: 72rem;
+  margin: 0 auto;
   width: 100%;
-  padding: 1.5rem;
+}
+
+.main-nav {
+  width: 100%;
+  background: var(--bg-color);
+  padding: 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 2rem;
+  height: 56px;
+}
+
+.nav-logo {
+  font-family: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-right: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+  justify-content: flex-end;
+  max-width: none;
+  height: 56px;
+}
+
+.nav-item {
+  font-family: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.nav-item:hover {
+  color: #38adfa;
+}
+
+.nav-item.nav-toggle {
+  margin-left: 2rem;
+  padding: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  border-radius: 0.375rem;
+  transition: background 0.15s;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background: none;
+}
+
+.theme-toggle::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover::before,
+.theme-toggle:focus::before {
+  background: #38bdf8 !important;
 }
 
 section {
@@ -1296,18 +1423,57 @@ section {
   padding-bottom: 1rem;
 }
 
-ul, ol, dl {
-  padding-left: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.nav-link {
+  display: block;
+  font-family: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #030712;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: color 0.15s;
+  line-height: 1.5;
+}
+
+[data-theme=dark] .nav-link {
+  color: #fff;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background: none;
+  color: #38bdf8;
+}
+
+[data-theme=dark] .nav-link:hover,
+[data-theme=dark] .nav-link:focus {
+  background: none;
+  color: #38bdf8;
+}
+
+ul,
+ol {
+  padding-left: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 ul {
   list-style-type: disc;
+  list-style-position: inside;
 }
 
 ol {
   list-style-type: decimal;
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 .btn-primary {
@@ -1436,6 +1602,271 @@ a[target=_blank] {
 a[target=_blank]:after {
   content: "↗ ";
   margin-left: 2px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.theme-toggle::before {
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e293b;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='5'%3E%3C/circle%3E%3Cline x1='12' y1='1' x2='12' y2='3'%3E%3C/line%3E%3Cline x1='12' y1='21' x2='12' y2='23'%3E%3C/line%3E%3Cline x1='4.22' y1='4.22' x2='5.64' y2='5.64'%3E%3C/line%3E%3Cline x1='18.36' y1='18.36' x2='19.78' y2='19.78'%3E%3C/line%3E%3Cline x1='1' y1='12' x2='3' y2='12'%3E%3C/line%3E%3Cline x1='21' y1='12' x2='23' y2='12'%3E%3C/line%3E%3Cline x1='4.22' y1='19.78' x2='5.64' y2='18.36'%3E%3C/line%3E%3Cline x1='18.36' y1='5.64' x2='19.78' y2='4.22'%3E%3C/line%3E%3C/svg%3E");
+  mask-size: 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+.theme-toggle[data-theme=dark]::before {
+  background: #fff;
+}
+.theme-toggle:hover {
+  opacity: 0.7;
+}
+
+[data-theme=dark] .theme-toggle::before,
+html[data-theme=dark] .theme-toggle::before {
+  background: #fff;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.typography-docs {
+  margin-top: 2.5rem;
+  color: var(--text-color);
+  font-size: 13px;
+}
+.typography-docs .section-subtitle {
+  font-family: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+.typography-docs .section-label {
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a3a3a3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.typography-docs .section-desc {
+  font-family: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a3a3a3;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  letter-spacing: 0;
+}
+.typography-docs .docs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+  background: none;
+  font-size: 13px;
+  color: var(--text-color);
+}
+.typography-docs .docs-table th, .typography-docs .docs-table td {
+  padding: 0.5rem 1.25rem 0.5rem 0;
+  text-align: left;
+  font-size: 13px;
+  vertical-align: top;
+  background: none;
+  border: none;
+  line-height: 1.5;
+}
+.typography-docs .docs-table th {
+  font-family: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  color: #030712 !important;
+  background: transparent !important;
+  padding: 8px 0 8px 0 !important;
+  text-align: left !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  border: none !important;
+  border-bottom: 1.5px solid var(--border-color) !important;
+  line-height: 1.5 !important;
+}
+.typography-docs .docs-table [data-theme=dark] th {
+  color: #fff !important;
+}
+.typography-docs .docs-table tr:last-child td {
+  border-bottom: 1.5px solid var(--border-color);
+}
+.typography-docs .docs-table .class-name,
+.typography-docs .docs-table .class-name-alt,
+.typography-docs .docs-table code,
+.typography-docs .docs-table .code-comment {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.typography-docs .docs-table .class-name {
+  color: #38adfa;
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-weight: 500;
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.typography-docs .docs-table .class-name:hover {
+  color: #0ea5e9;
+}
+.typography-docs .docs-table .class-name-alt {
+  color: #7dd3fc;
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-style: italic;
+  font-weight: 500;
+  background: none;
+}
+.typography-docs .docs-table code {
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  color: #a78bfa;
+  background: none;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  opacity: 1;
+  white-space: pre-line;
+}
+.typography-docs .docs-table .code-comment {
+  color: #a3a3a3;
+  font-style: italic;
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+}
+
+code, pre code {
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #a78bfa !important;
+  background: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+  opacity: 1 !important;
+  white-space: pre-line !important;
+}
+
+[data-theme=dark] .typography-docs .docs-table th,
+html[data-theme=dark] .typography-docs .docs-table th {
+  color: #fff !important;
+}
+
+.examples-section {
+  margin-top: 3rem;
+  color: var(--text-color);
+}
+
+.examples-label {
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a3a3a3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.examples-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.examples-desc {
+  color: #a3a3a3;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.examples-card, .examples-code {
+  background: #f3f4f6;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.example-label, .example-row span {
+  color: #18181b;
+}
+
+[data-theme=dark] .examples-card, [data-theme=dark] .examples-code, html[data-theme=dark] .examples-card, html[data-theme=dark] .examples-code {
+  background: #18181b;
+}
+
+[data-theme=dark] .example-label, [data-theme=dark] .example-row span {
+  color: #f1f5f9;
+}
+
+.example-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.example-label {
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  color: #a3a3a3;
+  font-size: 0.95em;
+  min-width: 80px;
+  opacity: 0.8;
+}
+
+.examples-code {
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem 0 1.5rem;
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.inline-code {
+  font-family: "IBM Plex Mono", "Menlo", "Monaco", "Consolas", monospace;
+  color: #a78bfa;
+  background: none;
+  font-size: 0.95em;
+}
+
+[data-theme=dark] .examples-code,
+html[data-theme=dark] .examples-code {
+  background: #18181b;
 }
 
 /*# sourceMappingURL=style.css.map */

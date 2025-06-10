@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <title>🪶 TailfeatherCSS</title>
 </head>
 <body>
-
-    <div class="container">
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">🪶 <span class="pl-2">tailfeathercss</span></div>
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#" class="nav-link active">Layout</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Forms</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Typography</a></li>
+          <li class="nav-item"><a href="#" class="nav-link pr-4">Styles</a></li>
+          <li class="nav-item nav-toggle"><button class="theme-toggle" aria-label="Toggle theme" data-theme="light"></button></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container px-4">
 
         <section>
-
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
             <h4>Heading 4</h4>
             <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
@@ -124,6 +134,71 @@
             <p class="text-info">.text-info</p>
             <p class="text-dark">.text-dark</p>
             <p class="text-light">.text-light</p>
+
+            <div class="typography-docs">
+              <span class="section-label">Typography</span>
+              <h3 class="section-subtitle">font-size</h3>
+              <p class="section-desc">Utilities for controlling the font size of an element.</p>
+              <table class="docs-table">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><a class="class-name" href="#">text-xs</a></td><td><code>font-size: var(--text-xs); <span class="code-comment">/* 0.75rem (12px) */</span><br>line-height: var(--text-xs-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-sm</a></td><td><code>font-size: var(--text-sm); <span class="code-comment">/* 0.875rem (14px) */</span><br>line-height: var(--text-sm-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-base</a></td><td><code>font-size: var(--text-base); <span class="code-comment">/* 1rem (16px) */</span><br>line-height: var(--text-base-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-lg</a></td><td><code>font-size: var(--text-lg); <span class="code-comment">/* 1.125rem (18px) */</span><br>line-height: var(--text-lg-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-xl</a></td><td><code>font-size: var(--text-xl); <span class="code-comment">/* 1.25rem (20px) */</span><br>line-height: var(--text-xl-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-2xl</a></td><td><code>font-size: var(--text-2xl); <span class="code-comment">/* 1.5rem (24px) */</span><br>line-height: var(--text-2xl-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-3xl</a></td><td><code>font-size: var(--text-3xl); <span class="code-comment">/* 1.875rem (30px) */</span><br>line-height: var(--text-3xl-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-4xl</a></td><td><code>font-size: var(--text-4xl); <span class="code-comment">/* 2.25rem (36px) */</span><br>line-height: var(--text-4xl-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-5xl</a></td><td><code>font-size: var(--text-5xl); <span class="code-comment">/* 3rem (48px) */</span><br>line-height: var(--text-5xl-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-6xl</a></td><td><code>font-size: var(--text-6xl); <span class="code-comment">/* 3.75rem (60px) */</span><br>line-height: var(--text-6xl-line-height);</code></td></tr>
+                  <tr><td><a class="class-name" href="#">text-7xl</a></td><td><code>font-size: var(--text-7xl); <span class="code-comment">/* 4.5rem (72px) */</span><br>line-height: var(--text-7xl-line-height);</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="examples-section">
+              <span class="examples-label">EXAMPLES</span>
+              <h4 class="examples-title">Basic example</h4>
+              <p class="examples-desc">
+                Use utilities like <code class="inline-code">text-sm</code> and <code class="inline-code">text-lg</code> to set the font size of an element:
+              </p>
+              <div class="examples-card">
+                <div class="example-row">
+                  <span class="example-label text-sm">text-sm</span>
+                  <span class="text-sm">The quick brown fox jumps over the lazy dog.</span>
+                </div>
+                <div class="example-row">
+                  <span class="example-label text-base">text-base</span>
+                  <span class="text-base">The quick brown fox jumps over the lazy dog.</span>
+                </div>
+                <div class="example-row">
+                  <span class="example-label text-lg">text-lg</span>
+                  <span class="text-lg">The quick brown fox jumps over the lazy dog.</span>
+                </div>
+                <div class="example-row">
+                  <span class="example-label text-xl">text-xl</span>
+                  <span class="text-xl">The quick brown fox jumps over the lazy dog.</span>
+                </div>
+                <div class="example-row">
+                  <span class="example-label text-2xl">text-2xl</span>
+                  <span class="text-2xl">The quick brown fox jumps over the lazy dog.</span>
+                </div>
+            </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;p class="text-sm"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-base"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-lg"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-xl"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-2xl"&gt;The quick brown fox ...&lt;/p&gt;
+                </code>
+                </pre>
+            </div>
         </section>
 
         <section></section>
@@ -156,5 +231,26 @@
 
     </div>
     
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme preference or use system preference
+        const currentTheme = localStorage.getItem('theme') || 
+            (prefersDarkScheme.matches ? 'dark' : 'light');
+        
+        // Set initial theme
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        themeToggle.setAttribute('data-theme', currentTheme);
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeToggle.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </body>
 </html>

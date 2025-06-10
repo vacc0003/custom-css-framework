@@ -1,8 +1,16 @@
 @use './theme' as theme;
 @use './sizing' as sizing;
 
-$font-family-body: "Jost", sans-serif;
-$font-family-heading: "Jost", sans-serif;
+html {
+  font-feature-settings: "cv11";
+}
+
+$font-family-body: "Inter var", ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-family-heading: $font-family-body;
 
 @each $key, $value in sizing.$sizes {
   .text-#{$key} {
@@ -10,61 +18,47 @@ $font-family-heading: "Jost", sans-serif;
   }
 }
 
-$font-weight-black: 900;
-$font-weight-extrabold: 800;
-$font-weight-bold: 700;
-$font-weight-semibold: 600;
-$font-weight-medium: 500;
-$font-weight-regular: 400;
-$font-weight-light: 300;
-$font-weight-extralight: 200;
 $font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+$tracking-tighter: -0.05em;
+$tracking-tight: -0.025em;
+$tracking-normal: 0;
+$tracking-wide: 0.025em;
+$tracking-wider: 0.05em;
+$tracking-widest: 0.1em;
 
 body {
-    font-family: $font-family-body;
-    font-weight: $font-weight-light;
-    line-height: 1.5;
-    font-size: map-get(sizing.$sizes,'md');
+  font-family: $font-family-body;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+  font-size: map-get(sizing.$sizes, 'base');
+  letter-spacing: $tracking-normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+$heading-scale: (
+  1: (size: '5xl', weight: $font-weight-bold, spacing: $tracking-tight),
+  2: (size: '4xl', weight: $font-weight-semibold, spacing: $tracking-tight),
+  3: (size: '3xl', weight: $font-weight-medium, spacing: $tracking-tight),
+  4: (size: '2xl', weight: $font-weight-light, spacing: $tracking-normal),
+  5: (size: 'lg', weight: $font-weight-extralight, spacing: $tracking-normal),
+);
+
+@each $h, $props in $heading-scale {
+  h#{$h} {
     font-family: $font-family-heading;
-}
-
-h1 {
-    font-weight: $font-weight-black;
-    font-size: map-get(sizing.$sizes,'3xl');
-    line-height: 1.2;
-}
-
-h2 {
-    font-weight: $font-weight-extrabold;
-    font-size: map-get(sizing.$sizes,'2xl');
-    line-height: 1.2;
-}
-
-h3 {
-    font-weight: $font-weight-bold;
-    font-size: map-get(sizing.$sizes,'xl');
-    line-height: 1.2;
-}
-
-h4 {
-    font-weight: $font-weight-semibold;
-    font-size: map-get(sizing.$sizes,'lg');
-    line-height: 1.2;
-}
-
-h5 {
-    font-weight: $font-weight-medium;
-    font-size: map-get(sizing.$sizes,'md');
-    line-height: 1.2;
-}
-
-h6 {
-    font-weight: $font-weight-regular;
-    font-size: map-get(sizing.$sizes,'sm');
-    line-height: 1.2;
+    font-weight: map-get($props, weight);
+    font-size: map-get(sizing.$sizes, map-get($props, size));
+    line-height: if($h <= 3, 1.2, 1.3);
+    letter-spacing: map-get($props, spacing);
+  }
 }
 
 @each $name, $color in theme.$theme {

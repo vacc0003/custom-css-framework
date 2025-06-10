@@ -27,96 +27,96 @@ $spacing: (
 @each $key, $value in $spacing {
 
   .m-#{$key} {
-    margin: $value;
+    margin: #{$value} !important;
   }
 
   .mt-#{$key} {
-    margin-top: $value;
+    margin-top: #{$value} !important;
   }
 
   .mb-#{$key} {
-    margin-bottom: $value;
+    margin-bottom: #{$value} !important;
   }
 
   .ml-#{$key} {
-    margin-left: $value;
+    margin-left: #{$value} !important;
   }
 
   .mr-#{$key} {
-    margin-right: $value;
+    margin-right: #{$value} !important;
   }
 
   .my-#{$key} {
-    margin-top: $value;
-    margin-bottom: $value;
+    margin-top: #{$value} !important;
+    margin-bottom: #{$value} !important;
   }
 
   .mx-#{$key} {
-    margin-left: $value;
-    margin-right: $value;
+    margin-left: #{$value} !important;
+    margin-right: #{$value} !important;
   }
 
   .p-#{$key} {
-    padding: $value;
+    padding: #{$value} !important;
   }
 
   .pt-#{$key} {
-    padding-top: $value;
+    padding-top: #{$value} !important;
   }
 
   .pb-#{$key} {
-    padding-bottom: $value;
+    padding-bottom: #{$value} !important;
   }
   
   .pl-#{$key} {
-    padding-left: $value;
+    padding-left: #{$value} !important;
   }
   
   .pr-#{$key} {
-    padding-right: $value;
+    padding-right: #{$value} !important;
   }
 
   .py-#{$key} {
-    padding-top: $value;
-    padding-bottom: $value;
+    padding-top: #{$value} !important;
+    padding-bottom: #{$value} !important;
   }
 
   .px-#{$key} {
-    padding-left: $value;
-    padding-right: $value;
+    padding-left: #{$value} !important;
+    padding-right: #{$value} !important;
   }
 
   .w-#{$key} {
-    width: $value;
+    width: #{$value} !important;
   }
 
   .h-#{$key} {
-    height: $value;
+    height: #{$value} !important;
   }
 
   .min-w-#{$key} {
-    min-width: $value;
+    min-width: #{$value} !important;
   }
 
   .min-h-#{$key} {  
-    min-height: $value;
+    min-height: #{$value} !important;
   }
 
   .max-w-#{$key} {
-    max-width: $value;
+    max-width: #{$value} !important;
   }
 }
 
 $sizes: (
-  xs: 0.75rem,
-  sm: 1rem,
-  md: 1.25rem,
-  lg: 1.875rem,
-  xl: 2.25rem,
-  '2xl': 3rem,
-  '3xl': 4rem,
-  '4xl': 5rem,
-  '5xl': 6rem,
-  '6xl': 7rem,
-  '7xl': 8rem
+  xs: 0.75rem,     // 12px
+  sm: 0.875rem,    // 14px
+  base: 1rem,      // 16px
+  lg: 1.125rem,    // 18px
+  xl: 1.25rem,     // 20px
+  '2xl': 1.5rem,   // 24px
+  '3xl': 1.875rem, // 30px
+  '4xl': 2.25rem,  // 36px
+  '5xl': 3rem,     // 48px
+  '6xl': 3.75rem,  // 60px
+  '7xl': 4.5rem    // 72px
 );
