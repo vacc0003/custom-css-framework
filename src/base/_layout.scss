@@ -82,39 +82,6 @@
   align-items: center;
 }
 
-.theme-toggle {
-  margin-left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
-  vertical-align: middle;
-  position: relative;
-  top: 0;
-  border-radius: 0.375rem;
-  transition: background 0.15s;
-}
-
-.theme-toggle:hover,
-.theme-toggle:focus {
-  background: none;
-}
-
-.theme-toggle::before {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.theme-toggle:hover::before,
-.theme-toggle:focus::before {
-  background: #38bdf8 !important;
-}
-
 section {
   padding-top: map-get(sizing.$spacing, 3);
   padding-bottom: map-get(sizing.$spacing, 3);
@@ -147,4 +114,240 @@ section {
 [data-theme="dark"] .nav-link:focus {
   background: none;
   color: #38bdf8;
+}
+
+// Display classes
+$display: (
+  inline: inline,
+  inline-block: inline-block,
+  block: block,
+  flex: flex,
+  inline-flex: inline-flex,
+  grid: grid,
+  inline-grid: inline-grid,
+  table: table,
+  inline-table: inline-table,
+  hidden: none
+);
+
+@each $key, $value in $display {
+  .#{$key} {
+    display: $value;
+  }
+}
+
+//Screen reader only classes
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.not-sr-only{
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;  
+}
+
+// Flexbox Direction
+$flex-directions: (
+  row: row,
+  row-reverse: row-reverse,
+  col: column,
+  col-reverse: column-reverse
+);
+
+@each $name, $value in $flex-directions {
+  .flex-#{$name} {
+    flex-direction: #{$value};
+  }
+}
+
+// Flexbox Wrap
+$flex-wraps: (
+  wrap: wrap,
+  nowrap: nowrap
+);
+
+@each $name, $value in $flex-wraps {
+  .flex-#{$name} {
+    flex-wrap: #{$value};
+  }
+}
+
+//Grid Columns
+@for $i from 1 through 12 {
+  .grid-cols-#{$i} {    
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+// Grid Col Spans, Grid Row Spans, Flex Grow
+@for $i from 1 through 12 {
+  .col-span-#{$i} {
+    grid-column: span #{$i} / span #{$i};
+  }
+  .row-span-#{$i} {
+    grid-row: span #{$i} / span #{$i};
+  }
+  .flex-grow-#{$i} {
+    flex-grow: #{$i};
+  }
+}
+
+//Align Items Utilities
+$align-items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline
+);
+
+@each $name, $value in $align-items {
+  .items-#{$name} {
+    align-items: #{$value} !important;
+  }
+}
+
+$self-alignments: (
+  auto: auto,
+  start: flex-start,
+  end: flex-end,  
+  center: center, 
+  stretch: stretch,
+  baseline: baseline, 
+);
+
+@each $name, $value in $self-alignments {
+  .self-#{$name} {
+    align-self: #{$value};
+  }
+}
+
+// Justify Content Utilities
+$justify-content: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+@each $name, $value in $justify-content {
+  .justify-#{$name} {
+    justify-content: #{$value};
+  }
+}
+
+@each $key, $value in sizing.$spacing {
+  .gap-#{$key} {
+    gap: #{$value} !important;
+  }
+  .gap-x-#{$key} {
+    column-gap: #{$value} !important;
+  }
+  .gap-y-#{$key} {
+    row-gap: #{$value} !important;
+  }
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.collapsible-content.expanded {
+  max-height: 2000px; // or a value large enough for your content
+  transition: max-height 0.5s ease-in;
+}
+
+// Max-height utilities
+.max-h-0 {
+  max-height: 0 !important;
+}
+.max-h-2000 {
+  max-height: 2000px !important;
+}
+
+// Transition utilities
+.transition-max-height {
+  transition: max-height 0.3s ease-out !important;
+}
+.transition-max-height-in {
+  transition: max-height 0.5s ease-in !important;
+}
+
+// Position utilities
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+// Object fit
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
+.object-none {
+  object-fit: none;
+}
+
+.object-scale-down {
+  object-fit: scale-down;
+}
+
+// Object position
+.object-center {
+  object-position: center;
+}
+
+.object-top {
+  object-position: top;
+}
+
+.object-bottom {
+  object-position: bottom;
+}
+
+.object-left {
+  object-position: left;
+}
+
+.object-right {
+  object-position: right;
 }

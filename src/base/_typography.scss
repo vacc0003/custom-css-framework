@@ -192,17 +192,16 @@ html[data-theme="dark"] .typography-docs .docs-table th {
 
 .example-row {
   display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  margin-bottom: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .example-label {
-  font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 1rem;
   color: #a3a3a3;
-  font-size: 0.95em;
-  min-width: 80px;
-  opacity: 0.8;
+  margin-bottom: 0.25rem;
 }
 
 .examples-code {
@@ -225,4 +224,33 @@ html[data-theme="dark"] .typography-docs .docs-table th {
 [data-theme="dark"] .examples-code,
 html[data-theme="dark"] .examples-code {
   background: #18181b;
-} 
+}
+
+// Font weight utilities
+.font-thin { font-weight: 100 !important; }
+.font-extralight { font-weight: 200 !important; }
+.font-light { font-weight: 300 !important; }
+.font-normal { font-weight: 400 !important; }
+.font-medium { font-weight: 500 !important; }
+.font-semibold { font-weight: 600 !important; }
+.font-bold { font-weight: 700 !important; }
+.font-extrabold { font-weight: 800 !important; }
+.font-black { font-weight: 900 !important; }
+// Custom property and arbitrary value
+.font-\(\<custom-property\>\) { font-weight: var(--custom-property) !important; }
+.font-\[value\] { font-weight: var(--value) !important; }
+
+// Text color utilities
+.text-inherit { color: inherit !important; }
+.text-current { color: currentColor !important; }
+.text-transparent { color: transparent !important; }
+.text-black { color: var(--color-black, #000) !important; }
+.text-white { color: var(--color-white, #fff) !important; }
+// Arbitrary value utility (for e.g. text-[#00BCFF])
+// This requires your build system to support arbitrary values, but for static CSS:
+// Example: .text-\[\#00BCFF\] { color: #00BCFF !important; }
+// You may need to generate these dynamically if you want full arbitrary value support.
+// For now, add a static example:
+.text-\[\#00BCFF\] { color: #00BCFF !important; }
+
+.text-center { text-align: center !important; } 

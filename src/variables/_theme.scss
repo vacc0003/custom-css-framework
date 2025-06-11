@@ -25,13 +25,13 @@
   @include theme-transition;
 }
 
-// primary, secondary, danger, success, info, dark, light
+// Theme colors
 $theme: (
-  primary: colors.$dark-blue,
-  secondary: colors.$dark-gray,
+  primary: colors.$cyan,
+  secondary: colors.$lime,
   danger: colors.$bright-red,
-  success: colors.$forest-green,
-  info: colors.$bright-blue,
+  success: colors.$green,
+  info: colors.$sky,
   dark: colors.$white,
   light: colors.$black,
 );
