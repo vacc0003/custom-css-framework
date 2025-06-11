@@ -29,43 +29,69 @@
             </div>
         </section>
 
-        <section>
-            <h2>Forms</h2>
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+        <hr class="section-divider" />
+        
+        <!-- Components Section -->
+        <section class="components-docs" style="margin-top: 4rem;">
+            <h2 class="mb-4">Components</h2>
 
-        <section>
-            <h2>Tables</h2>
-            <table>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Card Examples</h3>
+            <div class="card" style="margin-bottom:2rem;">
+            <h4 class="text-lg font-semibold">Default Card</h4>
+            <p>This is a default card. It uses a subtle border, background, and shadow.</p>
+            </div>
+            <div class="card-outline" style="margin-bottom:2rem;">
+            <h4 class="text-lg font-semibold">Outline Card</h4>
+            <p>This card uses a primary color border for emphasis.</p>
+            </div>
+            <div class="card-muted" style="margin-bottom:2rem;">
+            <h4 class="text-lg font-semibold">Muted Card</h4>
+            <p>This card uses a muted background and lighter text for less emphasis.</p>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Form Example</h3>
+            <form class="form" style="max-width:400px; margin-bottom:2rem;">
+            <label>
+                <span class="block mb-1">Email</span>
+                <input type="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+                <span class="block mb-1">Message</span>
+                <textarea rows="3" placeholder="Your message"></textarea>
+            </label>
+            <button type="submit" class="btn-primary">Send</button>
+            </form>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Table Example</h3>
+            <table class="table" style="margin-bottom:2rem;">
+            <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Alice</td>
+                <td>Active</td>
+                <td>Admin</td>
                 </tr>
                 <tr>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>123-456-7890</td>
-                </tr>   
-                <tr>
-                    <td>Jane Doe</td>
-                    <td>jane@example.com</td>
-                    <td>098-765-4321</td>
+                <td>Bob</td>
+                <td>Inactive</td>
+                <td>User</td>
                 </tr>
+                <tr>
+                <td>Charlie</td>
+                <td>Active</td>
+                <td>Moderator</td>
+                </tr>
+            </tbody>
             </table>
         </section>
 
-        <section>
-            <h2>Cards</h2>
-            <div class="card">
-                <h3>Card Title</h3>
-                <p>Card Description</p>
-            </div>
-        </section>
+        <hr class="section-divider" />
 
         <section>
             <h2>Typography</h2>
@@ -279,43 +305,41 @@
             </div>
         </section>
 
-        <section>
+        <hr class="section-divider" />
+
+        <section class="flex flex-wrap gap-4 items-center">
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
             <h4>Heading 4</h4>
             <h5>Heading 5</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-
         </section>
 
         <section>
             <h2>Section Header</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </section>
 
         <section>
             <h2>Lists</h2>
-            <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-            </ul>
-          
-            <ol>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-            </ol>
-
+            <div class="flex flex-wrap gap-4 items-center">
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                    <li>List Item 5</li>
+                </ul>
+            
+                <ol>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                    <li>List Item 5</li>
+                </ol>
+            </div>
         </section>
 
         <section>
@@ -323,6 +347,8 @@
             <a href="#">Learn More</a>
             <a href="https://www.google.com" target="_blank">External Link</a>
         </section>
+
+        <hr class="section-divider" />
 
         <section>
             <h2>Colours</h2>
@@ -370,7 +396,6 @@
                 </div>  
             </div>
         </section>
-        
 
     </div>
     
