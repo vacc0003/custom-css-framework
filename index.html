@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <title>🪶 TailfeatherCSS</title>
 </head>
-<body>
+<body class="pb-10">
     <nav class="main-nav">
       <div class="nav-container">
         <div class="nav-logo">🪶 <span class="pl-2">tailfeathercss</span></div>
         <ul class="nav-items sm:hidden">
-          <li class="nav-item"><a href="#" class="nav-link active">Layout</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Components</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Typography</a></li>
-          <li class="nav-item"><a href="#" class="nav-link pr-4">Styles</a></li>
+          <li class="nav-item"><a href="#layout" class="nav-link active">Layout</a></li>
+          <li class="nav-item"><a href="#components" class="nav-link">Components</a></li>
+          <li class="nav-item"><a href="#typography" class="nav-link">Typography</a></li>
+          <li class="nav-item"><a href="#styles" class="nav-link pr-4">Styles</a></li>
           <li class="nav-item nav-toggle pl-2 "><button class="theme-toggle" aria-label="Toggle theme" data-theme="light"></button></li>
         </ul>
       </div>
@@ -23,7 +23,7 @@
     <div class="container px-4">
 
         <!-- Layout Section -->
-        <section>
+        <section id="layout">
             <h2 class="mb-4">Layout</h2>
             <h3 class="text-xl font-semibold mb-4 pt-5">Flexbox</h3>
             <!-- Flex Basis -->
@@ -1100,7 +1100,7 @@
         <hr class="section-divider" />
         
         <!-- Components Section -->
-        <section class="components-docs" style="margin-top: 4rem;">
+        <section class="components-docs pt-8" id="components">
             <h2 class="mb-4">Components</h2>
 
             <!-- Cards -->
@@ -1110,7 +1110,7 @@
             <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
                 <div class="flex justify-center">
                 <div>
-                    <span class="section-label">Components</span>
+                    <span class="section-label">Cards</span>
                     <h3 class="section-subtitle" style="margin: 0;">card</h3>
                     <p class="section-desc">Default card style.</p>
                 </div>
@@ -1148,7 +1148,7 @@
             <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
                 <div class="flex justify-center">
                 <div>
-                    <span class="section-label">Components</span>
+                    <span class="section-label">Cards</span>
                     <h3 class="section-subtitle" style="margin: 0;">card-outline</h3>
                     <p class="section-desc">Outline card style.</p>
                 </div>
@@ -1186,7 +1186,7 @@
             <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
                 <div class="flex justify-center">
                 <div>
-                    <span class="section-label">Components</span>
+                    <span class="section-label">Cards</span>
                     <h3 class="section-subtitle" style="margin: 0;">card-muted</h3>
                     <p class="section-desc">Muted card style.</p>
                 </div>
@@ -1220,11 +1220,13 @@
                 </div>
             </div>
 
+            <h3 class="text-xl font-semibold mb-4 pt-5">Form</h3>
+
             <!-- Form Component -->
             <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle form section">
                 <div class="flex justify-center">
                 <div>
-                    <span class="section-label">Components</span>
+                    <span class="section-label">Form</span>
                     <h3 class="section-subtitle" style="margin: 0;">form</h3>
                     <p class="section-desc">Basic form component with styled inputs and labels.</p>
                 </div>
@@ -1272,11 +1274,13 @@
                 </div>
             </div>
 
+            <h3 class="text-xl font-semibold mb-4 pt-5">Table</h3>
+
             <!-- Table Component -->
             <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle table section">
                 <div class="flex justify-center">
                 <div>
-                    <span class="section-label">Components</span>
+                    <span class="section-label">Table</span>
                     <h3 class="section-subtitle" style="margin: 0;">table</h3>
                     <p class="section-desc">Styled table component with proper borders and spacing.</p>
                 </div>
@@ -1358,7 +1362,7 @@
         <hr class="section-divider" />
 
         <!-- Typography Section -->
-        <section>
+        <section class="pt-8" id="typography">
             <h2 class="mb-4">Typography</h2>
 
             <!-- Headings -->
@@ -1632,82 +1636,341 @@
 
         <hr class="section-divider" />
 
-        <section>
-            <h2>Lists</h2>
-            <div class="flex flex-wrap gap-4 items-center">
-                <ul>
-                    <li>List Item 1</li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
-                    <li>List Item 4</li>
-                    <li>List Item 5</li>
-                </ul>
+        <!-- Styles Section -->
+        <section class="pt-8" id="styles">
+            <h2 class="mb-4">Styles</h2>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Lists</h3>
+            <!-- Ordered Lists -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Lists</span>
+                    <h3 class="section-subtitle" style="margin: 0;">ordered-lists</h3>
+                    <p class="section-desc">Default styles for ordered lists.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Ordered List</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">ol</code> tag to create a basic ordered list:
+                </p>
+                <div class="examples-card">
+                    <ol class="text-primary">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                        <li>List Item 4</li>
+                        <li>List Item 5</li>
+                    </ol>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;ol class="text-primary"&gt;
+                    &lt;li&gt;List Item 1&lt;/li&gt;
+                    &lt;li&gt;List Item 2&lt;/li&gt;
+                    &lt;li&gt;List Item 3&lt;/li&gt;
+                    &lt;li&gt;List Item 4&lt;/li&gt;
+                    &lt;li&gt;List Item 5&lt;/li&gt;
+                &lt;/ol&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Unordered Lists -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Lists</span>
+                    <h3 class="section-subtitle" style="margin: 0;">unordered-lists</h3>
+                    <p class="section-desc">Default styles for unordered lists.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Unordered List</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">ul</code> tag to create a basic unordered list:
+                </p>
+                <div class="examples-card">
+                    <ul class="text-primary">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                        <li>List Item 4</li>
+                        <li>List Item 5</li>
+                    </ul>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;ul class="text-primary"&gt;
+                    &lt;li&gt;List Item 1&lt;/li&gt;
+                    &lt;li&gt;List Item 2&lt;/li&gt;
+                    &lt;li&gt;List Item 3&lt;/li&gt;
+                    &lt;li&gt;List Item 4&lt;/li&gt;
+                    &lt;li&gt;List Item 5&lt;/li&gt;
+                &lt;/ul&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
             
-                <ol>
-                    <li>List Item 1</li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
-                    <li>List Item 4</li>
-                    <li>List Item 5</li>
-                </ol>
-            </div>
-        </section>
-
-        <section>
-            <h2>Links</h2>
-            <a href="#">Learn More</a>
-            <a href="https://www.google.com" target="_blank">External Link</a>
-        </section>
-
-        <hr class="section-divider" />
-
-        <section>
-            <h2>Colours</h2>
-            <div class="flex gap-3 pt-4">
-
-                <div class="bg-primary" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                    <p class="text-dark">.bg-primary</p>
-                </div>
-                <div class="bg-secondary" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                    <p class="text-dark">.bg-secondary</p>
-                </div>
-                <div class="bg-danger" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                    <p class="text-dark">.bg-danger</p>
-                </div>
-                <div class="bg-success" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                    <p class="text-dark">.bg-success</p>
-                </div>
-                <div class="bg-info" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                    <p class="text-dark">.bg-info</p>
-                </div>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>Buttons</h2>
-            <button class="btn-primary">Click me!</button>
-            <a href="#" class="btn-secondary">Link Button</a>
-            <button class="btn-danger">Click me!</button>
-            <button class="btn-success">Click me!</button>
-            <button class="btn-info">Click me!</button>
-        </section>
-
-        <section>
-            <h2>Images</h2>
-            <div class="flex gap-8 pt-4">
+            <h3 class="text-xl font-semibold mb-4 pt-5">Links</h3>
+            <!-- Links -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
                 <div>
+                    <span class="section-label">Links</span>
+                    <h3 class="section-subtitle" style="margin: 0;">links</h3>
+                    <p class="section-desc">Default styles for links.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Link</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">a</code> tag to create a basic link:
+                </p>
+                <div class="examples-card">
+                    <a href="#" class="text-primary">Link</a>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;a href="#" class="text-primary"&gt;Link&lt;/a&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- External Links -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Links</span>
+                    <h3 class="section-subtitle" style="margin: 0;">external-links</h3>
+                    <p class="section-desc">Default styles for external links.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default External Link</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">a</code> tag to create a basic external link:
+                </p>
+                <div class="examples-card">
+                    <a href="https://www.google.com" class="text-primary" target="_blank">External Link</a>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;a href="https://www.google.com" class="text-primary" target="_blank"&gt;External Link&lt;/a&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Colors</h3>
+            <!-- Colors -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Colors</span>
+                    <h3 class="section-subtitle" style="margin: 0;">colors</h3>
+                    <p class="section-desc">Default styles for colors.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Colors</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">bg-primary</code> class to create a basic color:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 font-semibold">
+                    <div class="bg-primary rounded-lg flex justify-center items-center flex-1 h-xs">
+                      <p class="text-dark">.bg-primary</p>
+                    </div>
+                    <div class="bg-secondary rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-secondary</p>
+                    </div>
+                    <div class="bg-danger rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-danger</p>
+                    </div>
+                    <div class="bg-success rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-success</p>
+                    </div>
+                    <div class="bg-info rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-info</p>
+                    </div>
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="bg-primary"&gt;
+                        &lt;p class="text-dark"&gt;.bg-primary&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-secondary"&gt;
+                        &lt;p class="text-dark"&gt;.bg-secondary&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-danger"&gt;
+                        &lt;p class="text-dark"&gt;.bg-danger&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-success"&gt;
+                        &lt;p class="text-dark"&gt;.bg-success&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-info"&gt;
+                        &lt;p class="text-dark"&gt;.bg-info&lt;/p&gt;
+                    &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Buttons</h3>
+            <!-- Buttons -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Buttons</span>
+                    <h3 class="section-subtitle" style="margin: 0;">buttons</h3>
+                    <p class="section-desc">Default styles for buttons.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Buttons</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">btn-primary</code> class to create a basic button:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 font-semibold justify-center">
+                   
+                    <button class="btn-primary">Click me!</button>
+                    <a href="#" class="btn-secondary">Link Button</a>
+                    <button class="btn-danger">Click me!</button>
+                    <button class="btn-success">Click me!</button>
+                    <button class="btn-info">Click me!</button>
+                    
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;button class="btn-primary"&gt;Click me!&lt;/button&gt;
+                    &lt;a href="#" class="btn-secondary"&gt;Link Button&lt;/a&gt;
+                    &lt;button class="btn-danger"&gt;Click me!&lt;/button&gt;
+                    &lt;button class="btn-success"&gt;Click me!&lt;/button&gt;
+                    &lt;button class="btn-info"&gt;Click me!&lt;/button&gt;
+                    
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Images</h3>
+            <!-- Images -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Images</span>
+                    <h3 class="section-subtitle" style="margin: 0;">images</h3>
+                    <p class="section-desc">Default styles for images.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Images</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">img</code> tag to create a basic image:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 font-semibold justify-center">
+                   
                     <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-thumbnail">
-                </div>
-                <div>
                     <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-avatar">
-                </div>
-                <div>
                     <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-round">
-                </div>  
+                    
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;img src="https://placehold.co/300" alt="Placeholder Image" class="img img-thumbnail"&gt;
+                    &lt;img src="https://placehold.co/300" alt="Placeholder Image" class="img img-avatar"&gt;
+                    &lt;img src="https://placehold.co/300" alt="Placeholder Image" class="img img-round"&gt;
+                </code>
+                </pre>
+                </div>
             </div>
-        </section>
 
+            <h3 class="text-xl font-semibold mb-4 pt-5">Borders</h3>
+            <!-- Border -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Border</span>
+                    <h3 class="section-subtitle" style="margin: 0;">border</h3>
+                    <p class="section-desc">Default styles for borders.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Borders</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">section-divider</code> class to create a basic border:
+                </p>
+                <div class=" flex flex-wrap gap-4 font-semibold justify-center">
+                    <div class="section-divider w-full"></div>
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="section-divider w-full"&gt;&lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+        </section>
     </div>
     
     <script>

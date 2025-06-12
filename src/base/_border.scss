@@ -1,10 +1,10 @@
 // Section divider styles
 .section-divider {
   border: none;
-  border-top: 1.5px solid var(--border-color, #e5e7eb);
+  border-top: 1.5px solid var(--border-color, #00BCFF);
   margin: 4rem 0 3rem 0;
 }
 
 [data-theme="dark"] .section-divider {
-  border-top-color: #18181B;
+  border-top-color: #A783FF;
 } 
