@@ -4,157 +4,2013 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <title>🪶 TailfeatherCSS</title>
 </head>
-<body>
+<body class="pb-10">
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">🪶 <span class="pl-2">tailfeathercss</span></div>
+        <ul class="nav-items sm:hidden">
+          <li class="nav-item"><a href="#layout" class="nav-link active">Layout</a></li>
+          <li class="nav-item"><a href="#components" class="nav-link">Components</a></li>
+          <li class="nav-item"><a href="#typography" class="nav-link">Typography</a></li>
+          <li class="nav-item"><a href="#styles" class="nav-link pr-4">Styles</a></li>
+          <li class="nav-item nav-toggle pl-2 "><button class="theme-toggle" aria-label="Toggle theme" data-theme="light"></button></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container px-4">
 
-    <div class="container">
-
-        <section>
-
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <h6>Heading 6</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-
-        </section>
-
-        <section>
-            <h2>Section Header</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        </section>
-
-        <section>
-            <h2>Lists</h2>
-            <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-            </ul>
-          
-            <ol>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-                <li>List Item 4</li>
-                <li>List Item 5</li>
-            </ol>
-
-        </section>
-
-        <section>
-            <h2>Buttons</h2>
-            <button class="btn-primary">Click me!</button>
-            <a href="#" class="btn-secondary">Link Button</a>
-            <button class="btn-danger">Click me!</button>
-            <button class="btn-success">Click me!</button>
-            <button class="btn-info">Click me!</button>
-        </section>
-          
-        <section>
-            <h2>Links</h2>
-            <a href="#">Learn More</a>
-            <a href="https://www.google.com" target="_blank">External Link</a>
-        </section>
-
-        <section>
-            <h2>Forms</h2>
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-
-        <section>
-            <h2>Tables</h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                </tr>
-                <tr>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>123-456-7890</td>
-                </tr>   
-                <tr>
-                    <td>Jane Doe</td>
-                    <td>jane@example.com</td>
-                    <td>098-765-4321</td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <h2>Colours</h2>
-            <div class="bg-primary" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                <p class="text-dark">.bg-primary</p>
+        <!-- Layout Section -->
+        <section id="layout">
+            <h2 class="mb-4">Layout</h2>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Flexbox</h3>
+            <!-- Flex Basis -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex-basis</h3>
+                    <p class="section-desc">Utilities for controlling the initial size of flex items.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
             </div>
-            <div class="bg-secondary" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                <p class="text-dark">.bg-secondary</p>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">basis-&lt;number&gt;</span></td><td><code>flex-basis: calc(var(--spacing) * &lt;number&gt;);</code></td></tr>
+                    <tr><td><span class="class-name">basis-full</span></td><td><code>flex-basis: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">basis-auto</span></td><td><code>flex-basis: auto;</code></td></tr>
+                    <tr><td><span class="class-name">basis-3xs</span></td><td><code>flex-basis: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-2xs</span></td><td><code>flex-basis: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-xs</span></td><td><code>flex-basis: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-sm</span></td><td><code>flex-basis: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-md</span></td><td><code>flex-basis: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-lg</span></td><td><code>flex-basis: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-xl</span></td><td><code>flex-basis: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-2xl</span></td><td><code>flex-basis: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-3xl</span></td><td><code>flex-basis: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-4xl</span></td><td><code>flex-basis: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-5xl</span></td><td><code>flex-basis: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-6xl</span></td><td><code>flex-basis: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-7xl</span></td><td><code>flex-basis: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Using the spacing scale</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">basis-&lt;number&gt;</code> utilities like <code class="inline-code">basis-64</code> and <code class="inline-code">basis-128</code> to set the initial size of flex items based on the spacing scale:
+                </p>
+                <div class="examples-card flex flex-row gap-4 py-4">
+                    <div class="basis-1/4 example-grid-box">01</div>
+                    <div class="basis-1/4 example-grid-box">02</div>
+                    <div class="basis-2/4 example-grid-box">03</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="flex flex-row"&gt;
+                    &lt;div class="basis-1/4"&gt;01&lt;/div&gt;
+                    &lt;div class="basis-1/4"&gt;02&lt;/div&gt;
+                    &lt;div class="basis-2/4"&gt;03&lt;/div&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
             </div>
-            <div class="bg-danger" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                <p class="text-dark">.bg-danger</p>
+            <!-- Flex Direction -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-direction section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex-direction</h3>
+                    <p class="section-desc">Utilities for controlling the direction of flex items.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
             </div>
-            <div class="bg-success" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                <p class="text-dark">.bg-success</p>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">flex-row</span></td><td><code>flex-direction: row;</code></td></tr>
+                    <tr><td><span class="class-name">flex-row-reverse</span></td><td><code>flex-direction: row-reverse;</code></td></tr>
+                    <tr><td><span class="class-name">flex-col</span></td><td><code>flex-direction: column;</code></td></tr>
+                    <tr><td><span class="class-name">flex-col-reverse</span></td><td><code>flex-direction: column-reverse;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Row</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">flex-row</code> to position flex items horizontally in the same direction as text:
+                </p>
+                <div class="examples-card flex flex-row gap-3 py-4">
+                    <div class="example-flex-direction-box">01</div>
+                    <div class="example-flex-direction-box">02</div>
+                    <div class="example-flex-direction-box">03</div>
+                </div>
+                <pre class="examples-code">
+                    <code>
+                    &lt;div class="flex flex-row ..."&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                    &lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
             </div>
-            <div class="bg-info" style="height:300px; width:300px; display:flex; justify-content:center; align-items: center;">
-                <p class="text-dark">.bg-success</p>
+            <!-- Flex Wrap -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-wrap section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex-wrap</h3>
+                    <p class="section-desc">Utilities for controlling how flex items wrap.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">flex-nowrap</span></td><td><code>flex-wrap: nowrap;</code></td></tr>
+                    <tr><td><span class="class-name">flex-wrap</span></td><td><code>flex-wrap: wrap;</code></td></tr>
+                    <tr><td><span class="class-name">flex-wrap-reverse</span></td><td><code>flex-wrap: wrap-reverse;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Wrap normally</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">flex-wrap</code> to allow flex items to wrap:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 py-4 example-flex-wrap-bg">
+                    <div class="example-flex-wrap-box">01</div>
+                    <div class="example-flex-wrap-box">02</div>
+                    <div class="example-flex-wrap-box">03</div>
+                </div>
+                <pre class="examples-code">
+                    <code>
+                    &lt;div class="flex flex-wrap"&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                    &lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
+            </div>
+            <!-- Flex -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex</h3>
+                    <p class="section-desc">Utilities for controlling how flex items both grow and shrink.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">flex-&lt;number&gt;</span></td><td><code>flex: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">flex-&lt;fraction&gt;</span></td><td><code>flex: calc(&lt;fraction&gt; * 100%);</code></td></tr>
+                    <tr><td><span class="class-name">flex-auto</span></td><td><code>flex: 1 1 auto;</code></td></tr>
+                    <tr><td><span class="class-name">flex-initial</span></td><td><code>flex: 0 1 auto;</code></td></tr>
+                    <tr><td><span class="class-name">flex-none</span></td><td><code>flex: none;</code></td></tr>
+                    <tr><td><span class="class-name">grow</span></td><td><code>flex-grow: 1;</code></td></tr>
+                    <tr><td><span class="class-name">grow-&lt;number&gt;</span></td><td><code>flex-grow: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">shrink</span></td><td><code>flex-shrink: 1;</code></td></tr>
+                    <tr><td><span class="class-name">shrink-&lt;number&gt;</span></td><td><code>flex-shrink: &lt;number&gt;;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic example</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">flex-&lt;number&gt;</code> utilities like <code class="inline-code">flex-1</code> to allow a flex item to grow and shrink as needed, ignoring its initial size:
+                </p>
+                <div class="examples-card flex flex-row gap-3 py-4 example-flex-wrap-bg" style="overflow-x:auto;">
+                    <div class="w-14 flex-none example-flex-none-box">01</div>
+                    <div class="w-auto flex-1 example-flex-box">02</div>
+                    <div class="w-auto flex-1 example-flex-box">03</div>
+                </div>
+                <pre class="examples-code">
+                    <code>
+                    &lt;div class="flex"&gt;
+                    &lt;div class="w-14 flex-none ..."&gt;01&lt;/div&gt;
+                    &lt;div class="w-auto flex-1 ..."&gt;02&lt;/div&gt;
+                    &lt;div class="w-auto flex-1 ..."&gt;03&lt;/div&gt;
+                    &lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Grid</h3>
+            <!-- grid-template-columns -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-template-columns section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-template-columns</h3>
+                    <p class="section-desc">Utilities for specifying the columns in a grid layout.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">grid-cols-&lt;number&gt;</span></td><td><code>grid-template-columns: repeat(&lt;number&gt;, minmax(0, 1fr));</code></td></tr>
+                    <tr><td><span class="class-name">grid-cols-none</span></td><td><code>grid-template-columns: none;</code></td></tr>
+                    <tr><td><span class="class-name">grid-cols-subgrid</span></td><td><code>grid-template-columns: subgrid;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Specifying the grid columns</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">grid-cols-&lt;number&gt;</code> utilities like <code class="inline-code">grid-cols-2</code> and <code class="inline-code">grid-cols-4</code> to create grids with <em>n</em> equally sized columns:
+                </p>
+                <div class="examples-card grid grid-cols-4 gap-4 py-4">
+                    <div class="example-grid-box" style="background: #e879f9;">01</div>
+                    <div class="example-grid-box" style="background: #e879f9;">02</div>
+                    <div class="example-grid-box" style="background: #e879f9;">03</div>
+                    <div class="example-grid-box" style="background: #e879f9;">04</div>
+                    <div class="example-grid-box" style="background: #e879f9;">05</div>
+                    <div class="example-grid-box" style="background: #e879f9;">06</div>
+                    <div class="example-grid-box" style="background: #e879f9;">07</div>
+                    <div class="example-grid-box" style="background: #e879f9;">08</div>
+                    <div class="example-grid-box" style="background: #e879f9;">09</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="grid grid-cols-4 gap-4"&gt;
+                    &lt;div&gt;01&lt;/div&gt;
+                    &lt;!-- ... --&gt;
+                    &lt;div&gt;09&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- grid-column -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-column section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-column</h3>
+                    <p class="section-desc">Utilities for controlling how elements are sized and placed across grid columns.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">col-span-&lt;number&gt;</span></td><td><code>grid-column: span &lt;number&gt; / span &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">col-span-full</span></td><td><code>grid-column: 1 / -1;</code></td></tr>
+                    <tr><td><span class="class-name">col-start-&lt;number&gt;</span></td><td><code>grid-column-start: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">-col-start-&lt;number&gt;</span></td><td><code>grid-column-start: calc(&lt;number&gt; * -1);</code></td></tr>
+                    <tr><td><span class="class-name">col-start-auto</span></td><td><code>grid-column-start: auto;</code></td></tr>
+                    <tr><td><span class="class-name">col-end-&lt;number&gt;</span></td><td><code>grid-column-end: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">-col-end-&lt;number&gt;</span></td><td><code>grid-column-end: calc(&lt;number&gt; * -1);</code></td></tr>
+                    <tr><td><span class="class-name">col-end-auto</span></td><td><code>grid-column-end: auto;</code></td></tr>
+                    <tr><td><span class="class-name">col-auto</span></td><td><code>grid-column: auto;</code></td></tr>
+                    <tr><td><span class="class-name">col-&lt;number&gt;</span></td><td><code>grid-column: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">-col-&lt;number&gt;</span></td><td><code>grid-column: calc(&lt;number&gt; * -1);</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Spanning columns</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">col-span-&lt;number&gt;</code> utilities like <code class="inline-code">col-span-2</code> and <code class="inline-code">col-span-4</code> to make an element span <em>n</em> columns:
+                </p>
+                <div class="examples-card grid grid-cols-3 gap-4 py-4">
+                    <div class="example-grid-box" style="background: #818cf8;">01</div>
+                    <div class="example-grid-box" style="background: #818cf8;">02</div>
+                    <div class="example-grid-box" style="background: #818cf8;">03</div>
+                    <div class="example-grid-box col-span-2" style="background: #818cf8;">04</div>
+                    <div class="example-grid-box" style="background: #818cf8;">05</div>
+                    <div class="example-grid-box" style="background: #818cf8;">06</div>
+                    <div class="example-grid-box col-span-2" style="background: #818cf8;">07</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div&gt;01&lt;/div&gt;
+  &lt;div&gt;02&lt;/div&gt;
+  &lt;div&gt;03&lt;/div&gt;
+  &lt;div class="col-span-2"&gt;04&lt;/div&gt;
+  &lt;div&gt;05&lt;/div&gt;
+  &lt;div&gt;06&lt;/div&gt;
+  &lt;div class="col-span-2"&gt;07&lt;/div&gt;
+&lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- grid-template-rows -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-template-rows section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-template-rows</h3>
+                    <p class="section-desc">Utilities for specifying the rows in a grid layout.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">grid-rows-&lt;number&gt;</span></td><td><code>grid-template-rows: repeat(&lt;number&gt;, minmax(0, 1fr));</code></td></tr>
+                    <tr><td><span class="class-name">grid-rows-none</span></td><td><code>grid-template-rows: none;</code></td></tr>
+                    <tr><td><span class="class-name">grid-rows-subgrid</span></td><td><code>grid-template-rows: subgrid;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Specifying the grid rows</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">grid-rows-&lt;number&gt;</code> utilities like <code class="inline-code">grid-rows-2</code> and <code class="inline-code">grid-rows-4</code> to create grids with <em>n</em> equally sized rows:
+                </p>
+                <div class="examples-card grid grid-cols-3 grid-rows-4 gap-4 py-4"">
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">01</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">02</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">03</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">04</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">05</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">06</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">07</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">08</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">09</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="grid grid-cols-3 grid-rows-4 gap-4"&gt;
+                    &lt;div&gt;01&lt;/div&gt;
+                    &lt;!-- ... --&gt;
+                    &lt;div&gt;09&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- grid-row -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-row section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-row</h3>
+                    <p class="section-desc">Utilities for controlling how elements are sized and placed across grid rows.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">row-span-&lt;number&gt;</span></td><td><code>grid-row: span &lt;number&gt; / span &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">row-span-full</span></td><td><code>grid-row: 1 / -1;</code></td></tr>
+                        <tr><td><span class="class-name">row-start-&lt;number&gt;</span></td><td><code>grid-row-start: &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">-row-start-&lt;number&gt;</span></td><td><code>grid-row-start: calc(&lt;number&gt; * -1);</code></td></tr>
+                        <tr><td><span class="class-name">row-start-auto</span></td><td><code>grid-row-start: auto;</code></td></tr>
+                        <tr><td><span class="class-name">row-end-&lt;number&gt;</span></td><td><code>grid-row-end: &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">-row-end-&lt;number&gt;</span></td><td><code>grid-row-end: calc(&lt;number&gt; * -1);</code></td></tr>
+                        <tr><td><span class="class-name">row-end-auto</span></td><td><code>grid-row-end: auto;</code></td></tr>
+                        <tr><td><span class="class-name">row-auto</span></td><td><code>grid-row: auto;</code></td></tr>
+                        <tr><td><span class="class-name">row-&lt;number&gt;</span></td><td><code>grid-row: &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">-row-&lt;number&gt;</span></td><td><code>grid-row: calc(&lt;number&gt; * -1);</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Spanning rows</div>
+                    <div class="examples-desc">Use <code class="inline-code">row-span-&lt;number&gt;</code> utilities like <code class="inline-code">row-span-2</code> and <code class="inline-code">row-span-4</code> to make an element span <em>n</em> rows:</div>
+                <div class="examples-card">
+                        <div class="grid grid-flow-col grid-rows-3 gap-4">
+                            <div class="example-grid-box row-span-3" style="background: #E12BFB;">01</div>
+                            <div class="example-grid-box col-span-2 bg-opacity-50" style="background: rgba(225, 43, 251, var(--bg-opacity));">02</div>
+                            <div class="example-grid-box col-span-2 row-span-2" style="background: #E12BFB;">03</div>
+                    </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="grid grid-flow-col grid-rows-3 gap-4"&gt;
+                        &lt;div class="row-span-3 ..."&gt;01&lt;/div&gt;
+                        &lt;div class="col-span-2 ..."&gt;02&lt;/div&gt;
+                        &lt;div class="col-span-2 row-span-2 ..."&gt;03&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Utility</h3>
+            <!-- gap -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle gap section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Utility</span>
+                    <h3 class="section-subtitle" style="margin: 0;">gap</h3>
+                    <p class="section-desc">Utilities for controlling gutters between grid and flexbox items.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">gap-&lt;number&gt;</span></td><td><code>gap: calc(var(--spacing) * &lt;value&gt;);</code></td></tr>
+                        <tr><td><span class="class-name">gap-x-&lt;number&gt;</span></td><td><code>column-gap: calc(var(--spacing) * &lt;value&gt;);</code></td></tr>
+                        <tr><td><span class="class-name">gap-y-&lt;number&gt;</span></td><td><code>row-gap: calc(var(--spacing) * &lt;value&gt;);</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Basic example</div>
+                    <div class="examples-desc">Use <code class="inline-code">gap-&lt;number&gt;</code> utilities like <code class="inline-code">gap-2</code> and <code class="inline-code">gap-4</code> to change the gap between both rows and columns in grid and flexbox layouts:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="example-grid-box" style="background: #8A4FFF;">01</div>
+                            <div class="example-grid-box" style="background: #8A4FFF;">02</div>
+                            <div class="example-grid-box" style="background: #8A4FFF;">03</div>
+                            <div class="example-grid-box" style="background: #8A4FFF;">04</div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="grid grid-cols-2 gap-4"&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                        &lt;div&gt;04&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- justify-content -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle justify-content section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Utility</span>
+                    <h3 class="section-subtitle" style="margin: 0;">justify-content</h3>
+                    <p class="section-desc">Utilities for controlling how flex and grid items are positioned along a container's main axis.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">justify-start</span></td><td><code>justify-content: flex-start;</code></td></tr>
+                        <tr><td><span class="class-name">justify-end</span></td><td><code>justify-content: flex-end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-end-safe</span></td><td><code>justify-content: safe flex-end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-center</span></td><td><code>justify-content: center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-center-safe</span></td><td><code>justify-content: safe center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-between</span></td><td><code>justify-content: space-between;</code></td></tr>
+                        <tr><td><span class="class-name">justify-around</span></td><td><code>justify-content: space-around;</code></td></tr>
+                        <tr><td><span class="class-name">justify-evenly</span></td><td><code>justify-content: space-evenly;</code></td></tr>
+                        <tr><td><span class="class-name">justify-stretch</span></td><td><code>justify-content: stretch;</code></td></tr>
+                        <tr><td><span class="class-name">justify-baseline</span></td><td><code>justify-content: baseline;</code></td></tr>
+                        <tr><td><span class="class-name">justify-normal</span></td><td><code>justify-content: normal;</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Start</div>
+                    <div class="examples-desc">Use the <code class="inline-code">justify-start</code> utility to justify items against the start of the container's main axis:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="flex justify-start gap-3">
+                            <div class="example-flex-direction-box" style="background: #E12BFB;">01</div>
+                            <div class="example-flex-direction-box" style="background: #E12BFB;">02</div>
+                            <div class="example-flex-direction-box" style="background: #E12BFB;">03</div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="flex justify-start ..."&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- justify-items -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle justify-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Utility</span>
+                    <h3 class="section-subtitle" style="margin: 0;">justify-items</h3>
+                    <p class="section-desc">Utilities for controlling how grid items are aligned along their inline axis.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">justify-items-start</span></td><td><code>justify-items: start;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-end</span></td><td><code>justify-items: end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-end-safe</span></td><td><code>justify-items: safe end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-center</span></td><td><code>justify-items: center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-center-safe</span></td><td><code>justify-items: safe center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-stretch</span></td><td><code>justify-items: stretch;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-normal</span></td><td><code>justify-items: normal;</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Start</div>
+                    <div class="examples-desc">Use the <code class="inline-code">justify-items-start</code> utility to justify grid items against the start of their inline axis:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="grid grid-cols-3 grid-rows-2 gap-4 justify-items-start">
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">01</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">02</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">03</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">04</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">05</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">06</div></div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="grid grid-cols-3 grid-rows-2 gap-4 justify-items-start"&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;01&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;02&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;03&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;04&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;05&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;06&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- align-items -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle align-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Utility</span>
+                    <h3 class="section-subtitle" style="margin: 0;">align-items</h3>
+                    <p class="section-desc">Utilities for controlling how flex and grid items are positioned along a container's cross axis.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">items-start</span></td><td><code>align-items: flex-start;</code></td></tr>
+                    <tr><td><span class="class-name">items-end</span></td><td><code>align-items: flex-end;</code></td></tr>
+                    <tr><td><span class="class-name">items-end-safe</span></td><td><code>align-items: safe flex-end;</code></td></tr>
+                    <tr><td><span class="class-name">items-center</span></td><td><code>align-items: center;</code></td></tr>
+                    <tr><td><span class="class-name">items-center-safe</span></td><td><code>align-items: safe center;</code></td></tr>
+                    <tr><td><span class="class-name">items-baseline</span></td><td><code>align-items: baseline;</code></td></tr>
+                    <tr><td><span class="class-name">items-baseline-last</span></td><td><code>align-items: last baseline;</code></td></tr>
+                    <tr><td><span class="class-name">items-stretch</span></td><td><code>align-items: stretch;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Stretch</div>
+                    <div class="examples-desc">Use the <code class="inline-code">items-stretch</code> utility to stretch items to fill the container's cross axis:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="flex items-stretch gap-4">
+                            <div class="example-grid-box py-8" style="background: #22B6F6; justify-content: center; align-items: center;">01</div>
+                            <div class="example-grid-box py-8" style="background: #22B6F6;  justify-content: center; align-items: center;">02</div>
+                            <div class="example-grid-box py-8" style="background: #22B6F6;  justify-content: center; align-items: center;">03</div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="flex items-stretch ..."&gt;
+                            &lt;div class="py-4"&gt;01&lt;/div&gt;
+                            &lt;div class="py-12"&gt;02&lt;/div&gt;
+                            &lt;div class="py-8"&gt;03&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Utility -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle align-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Utility</span>
+                    <h3 class="section-subtitle" style="margin: 0;">utility-classes</h3>
+                    <p class="section-desc">Common utility classes.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">z-&lt;number&gt;</span></td><td><code>z-index-&lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">items-end</span></td><td><code>align-items: flex-end;</code></td></tr>
+                    <tr><td><span class="class-name">static</span></td><td><code>position: static;</code></td></tr>
+                    <tr><td><span class="class-name">fixed</span></td><td><code>position: fixed;</code></td></tr>
+                    <tr><td><span class="class-name">absolute</span></td><td><code>position: absolute;</code></td></tr>
+                    <tr><td><span class="class-name">relative</span></td><td><code>position: relative;</code></td></tr>
+                    <tr><td><span class="class-name">sticky</span></td><td><code>position: sticky;</code></td></tr>
+
+                    <tr><td><span class="class-name">overflow-auto</span></td><td><code>overflow: auto;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-hidden</span></td><td><code>overflow: hidden;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-clip</span></td><td><code>overflow: clip;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-visible</span></td><td><code>overflow: visible;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-scroll</span></td><td><code>overflow: scroll;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-x-auto</span></td><td><code>overflow-x: auto;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-y-auto</span></td><td><code>overflow-y: auto;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-x-hidden</span></td><td><code>overflow-x: hidden;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-y-hidden</span></td><td><code>overflow-y: hidden;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-x-clip</span></td><td><code>overflow-x: clip;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-y-clip</span></td><td><code>overflow-y: clip;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-x-visible</span></td><td><code>overflow-x: visible;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-y-visible</span></td><td><code>overflow-y: visible;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-x-scroll</span></td><td><code>overflow-x: scroll;</code></td></tr>
+                    <tr><td><span class="class-name">overflow-y-scroll</span></td><td><code>overflow-y: scroll;</code></td></tr>
+
+                    <tr><td><span class="class-name">box-border</span></td><td><code>box-sizing: border-box;</code></td></tr>
+                    <tr><td><span class="class-name">box-content</span></td><td><code>box-sizing: content-box;</code></td></tr>
+
+                    <tr><td><span class="class-name">inline</span></td><td><code>display: inline;</code></td></tr>
+                    <tr><td><span class="class-name">block</span></td><td><code>display: block;</code></td></tr>
+                    <tr><td><span class="class-name">inline-block</span></td><td><code>display: inline-block;</code></td></tr>
+                    <tr><td><span class="class-name">flex</span></td><td><code>display: flex;</code></td></tr>
+                    <tr><td><span class="class-name">inline-flex</span></td><td><code>display: inline-flex;</code></td></tr>
+                    <tr><td><span class="class-name">grid</span></td><td><code>display: grid;</code></td></tr>
+                    <tr><td><span class="class-name">inline-grid</span></td><td><code>display: inline-grid;</code></td></tr>
+                    <tr><td><span class="class-name">hidden</span></td><td><code>display: none;</code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Spacing</h3>
+            <!-- Padding -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle align-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Spacing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">padding</h3>
+                    <p class="section-desc">Utilities for controlling an element's padding.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">p-0</span></td><td><code>no padding</code></td></tr>
+                    <tr><td><span class="class-name">p-1</span></td><td><code>padding: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">p-2</span></td><td><code>padding: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">p-3</span> – <span class="class-name">p-12</span></td><td><code>padding: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">pt-1</span></td><td><code>padding-top: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">pt-2</span></td><td><code>padding-top: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">pt-3</span> – <span class="class-name">pt-12</span></td><td><code>padding-top: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">pr-1</span></td><td><code>padding-right: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">pr-2</span></td><td><code>padding-right: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">pr-3</span> – <span class="class-name">pr-12</span></td><td><code>padding-right: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">pb-1</span></td><td><code>padding-bottom: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">pb-2</span></td><td><code>padding-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">pb-3</span> – <span class="class-name">pb-12</span></td><td><code>padding-bottom: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">pl-1</span></td><td><code>padding-left: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">pl-2</span></td><td><code>padding-left: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">pl-3</span> – <span class="class-name">pl-12</span></td><td><code>padding-left: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">px-1</span></td><td><code>padding-x: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">px-2</span></td><td><code>padding-x: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">px-3</span> – <span class="class-name">px-12</span></td><td><code>padding-x: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">py-1</span></td><td><code>padding-y: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">py-2</span></td><td><code>padding-y: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">py-3</span> – <span class="class-name">py-12</span></td><td><code>padding-y: 1rem; ... 8rem;</code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- Margin -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle align-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Spacing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">margin</h3>
+                    <p class="section-desc">Utilities for controlling an element's margin.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">m-0</span></td><td><code>no margin</code></td></tr>
+                    <tr><td><span class="class-name">m-1</span></td><td><code>margin: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">m-2</span></td><td><code>margin: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">m-3</span> – <span class="class-name">m-12</span></td><td><code>margin: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">mt-1</span></td><td><code>margin-top: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">mt-2</span></td><td><code>margin-top: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">mt-3</span> – <span class="class-name">mt-12</span></td><td><code>margin-top: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">mr-1</span></td><td><code>margin-right: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">mr-2</span></td><td><code>margin-right: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">mr-3</span> – <span class="class-name">mr-12</span></td><td><code>margin-right: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">mb-1</span></td><td><code>margin-bottom: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">mb-2</span></td><td><code>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">mb-3</span> – <span class="class-name">mb-12</span></td><td><code>margin-bottom: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">ml-1</span></td><td><code>margin-left: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">ml-2</span></td><td><code>margin-left: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">ml-3</span> – <span class="class-name">ml-12</span></td><td><code>margin-left: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">mx-1</span></td><td><code>margin-x: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">mx-2</span></td><td><code>margin-x: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">mx-3</span> – <span class="class-name">mx-12</span></td><td><code>margin-x: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">my-1</span></td><td><code>margin-y: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">my-2</span></td><td><code>margin-y: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">my-3</span> – <span class="class-name">my-12</span></td><td><code>margin-y: 1rem; ... 8rem;</code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Sizing</h3>
+            <!-- Width -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle width section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Sizing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">width</h3>
+                    <p class="section-desc">Utilities for controlling the width of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">w-0</span></td><td><code>width: 0;</code></td></tr>
+                    <tr><td><span class="class-name">w-1</span></td><td><code>width: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">w-2</span></td><td><code>width: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">w-3</span> – <span class="class-name">w-12</span></td><td><code>width: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">w-auto</span></td><td><code>width: auto;</code></td></tr>
+                    <tr><td><span class="class-name">w-full</span></td><td><code>width: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">w-screen</span></td><td><code>width: 100vw;</code></td></tr>
+                    <tr><td><span class="class-name">w-3xs</span></td><td><code>width: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-2xs</span></td><td><code>width: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-xs</span></td><td><code>width: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-sm</span></td><td><code>width: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-md</span></td><td><code>width: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-lg</span></td><td><code>width: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-xl</span></td><td><code>width: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-2xl</span></td><td><code>width: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-3xl</span></td><td><code>width: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-4xl</span></td><td><code>width: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-5xl</span></td><td><code>width: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-6xl</span></td><td><code>width: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">w-7xl</span></td><td><code>width: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- Height -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle height section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Sizing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">height</h3>
+                    <p class="section-desc">Utilities for controlling the height of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">h-0</span></td><td><code>height: 0;</code></td></tr>
+                    <tr><td><span class="class-name">h-1</span></td><td><code>height: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">h-2</span></td><td><code>height: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h-3</span> – <span class="class-name">h-12</span></td><td><code>height: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">h-auto</span></td><td><code>height: auto;</code></td></tr>
+                    <tr><td><span class="class-name">h-full</span></td><td><code>height: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">h-screen</span></td><td><code>height: 100vh;</code></td></tr>
+                    <tr><td><span class="class-name">h-3xs</span></td><td><code>height: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-2xs</span></td><td><code>height: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-xs</span></td><td><code>height: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-sm</span></td><td><code>height: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-md</span></td><td><code>height: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-lg</span></td><td><code>height: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-xl</span></td><td><code>height: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-2xl</span></td><td><code>height: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-3xl</span></td><td><code>height: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-4xl</span></td><td><code>height: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-5xl</span></td><td><code>height: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-6xl</span></td><td><code>height: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">h-7xl</span></td><td><code>height: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- min-width -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle min-width section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Sizing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">min-width</h3>
+                    <p class="section-desc">Utilities for controlling the minimum width of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">min-w-0</span></td><td><code>min-width: 0;</code></td></tr>
+                    <tr><td><span class="class-name">min-w-1</span></td><td><code>min-width: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">min-w-2</span></td><td><code>min-width: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">min-w-3</span> – <span class="class-name">min-w-12</span></td><td><code>min-width: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">min-w-full</span></td><td><code>min-width: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">min-w-3xs</span></td><td><code>min-width: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-2xs</span></td><td><code>min-width: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-xs</span></td><td><code>min-width: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-sm</span></td><td><code>min-width: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-md</span></td><td><code>min-width: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-lg</span></td><td><code>min-width: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-xl</span></td><td><code>min-width: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-2xl</span></td><td><code>min-width: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-3xl</span></td><td><code>min-width: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-4xl</span></td><td><code>min-width: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-5xl</span></td><td><code>min-width: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-6xl</span></td><td><code>min-width: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-w-7xl</span></td><td><code>min-width: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- max-width -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle max-width section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Sizing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">max-width</h3>
+                    <p class="section-desc">Utilities for controlling the maximum width of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">max-w-0</span></td><td><code>max-width: 0;</code></td></tr>
+                    <tr><td><span class="class-name">max-w-1</span></td><td><code>max-width: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">max-w-2</span></td><td><code>max-width: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">max-w-3</span> – <span class="class-name">max-w-12</span></td><td><code>max-width: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">max-w-none</span></td><td><code>max-width: none;</code></td></tr>
+                    <tr><td><span class="class-name">max-w-full</span></td><td><code>max-width: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">max-w-3xs</span></td><td><code>max-width: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-2xs</span></td><td><code>max-width: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-xs</span></td><td><code>max-width: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-sm</span></td><td><code>max-width: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-md</span></td><td><code>max-width: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-lg</span></td><td><code>max-width: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-xl</span></td><td><code>max-width: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-2xl</span></td><td><code>max-width: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-3xl</span></td><td><code>max-width: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-4xl</span></td><td><code>max-width: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-5xl</span></td><td><code>max-width: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-6xl</span></td><td><code>max-width: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-w-7xl</span></td><td><code>max-width: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- min-height -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle min-height section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Sizing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">min-height</h3>
+                    <p class="section-desc">Utilities for controlling the minimum height of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">min-h-0</span></td><td><code>min-height: 0;</code></td></tr>
+                    <tr><td><span class="class-name">min-h-1</span></td><td><code>min-height: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">min-h-2</span></td><td><code>min-height: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">min-h-3</span> – <span class="class-name">min-h-12</span></td><td><code>min-height: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">min-h-full</span></td><td><code>min-height: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">min-h-3xs</span></td><td><code>min-height: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-2xs</span></td><td><code>min-height: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-xs</span></td><td><code>min-height: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-sm</span></td><td><code>min-height: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-md</span></td><td><code>min-height: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-lg</span></td><td><code>min-height: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-xl</span></td><td><code>min-height: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-2xl</span></td><td><code>min-height: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-3xl</span></td><td><code>min-height: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-4xl</span></td><td><code>min-height: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-5xl</span></td><td><code>min-height: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-6xl</span></td><td><code>min-height: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">min-h-7xl</span></td><td><code>min-height: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- max-height -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle max-height section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Sizing</span>
+                    <h3 class="section-subtitle" style="margin: 0;">max-height</h3>
+                    <p class="section-desc">Utilities for controlling the maximum height of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">max-h-0</span></td><td><code>max-height: 0;</code></td></tr>
+                    <tr><td><span class="class-name">max-h-1</span></td><td><code>max-height: 0.25rem;</code></td></tr>
+                    <tr><td><span class="class-name">max-h-2</span></td><td><code>max-height: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">max-h-3</span> – <span class="class-name">max-h-12</span></td><td><code>max-height: 1rem; ... 8rem;</code></td></tr>
+                    <tr><td><span class="class-name">max-h-none</span></td><td><code>max-height: none;</code></td></tr>
+                    <tr><td><span class="class-name">max-h-full</span></td><td><code>max-height: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">max-h-3xs</span></td><td><code>max-height: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-2xs</span></td><td><code>max-height: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-xs</span></td><td><code>max-height: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-sm</span></td><td><code>max-height: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-md</span></td><td><code>max-height: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-lg</span></td><td><code>max-height: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-xl</span></td><td><code>max-height: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-2xl</span></td><td><code>max-height: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-3xl</span></td><td><code>max-height: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-4xl</span></td><td><code>max-height: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-5xl</span></td><td><code>max-height: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-6xl</span></td><td><code>max-height: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">max-h-7xl</span></td><td><code>max-height: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
             </div>
         </section>
 
-        <section>
-            <h2>Typography</h2>
-            <p class="text-primary">.text-primary</p>
-            <p class="text-secondary">.text-secondary</p>
-            <p class="text-danger">.text-danger</p>
-            <p class="text-success">.text-success</p>
-            <p class="text-info">.text-info</p>
-            <p class="text-dark">.text-dark</p>
-            <p class="text-light">.text-light</p>
+        <hr class="section-divider" />
+        
+        <!-- Components Section -->
+        <section class="components-docs pt-8" id="components">
+            <h2 class="mb-4">Components</h2>
+
+            <!-- Cards -->
+            <h3 class="text-xl font-semibold mb-4 pt-5">Cards</h3>
+
+            <!-- Default Card -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Cards</span>
+                    <h3 class="section-subtitle" style="margin: 0;">card</h3>
+                    <p class="section-desc">Default card style.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Card</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">card</code> class to create a basic card with subtle border, background, and shadow:
+                </p>
+                <div class="examples-card">
+                    <div class="card">
+                    <h4 class="text-lg font-semibold">Default Card</h4>
+                    <p>This is a default card. It uses a subtle border, background, and shadow.</p>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="card"&gt;
+                    &lt;h4 class="text-lg font-semibold"&gt;Default Card&lt;/h4&gt;
+                    &lt;p&gt;This is a default card. It uses a subtle border, background, and shadow.&lt;/p&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Outline Card -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Cards</span>
+                    <h3 class="section-subtitle" style="margin: 0;">card-outline</h3>
+                    <p class="section-desc">Outline card style.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Outline Card</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">card-outline</code> class to create a card with a primary color border for emphasis:
+                </p>
+                <div class="examples-card">
+                    <div class="card-outline">
+                    <h4 class="text-lg font-semibold">Outline Card</h4>
+                    <p>This card uses a primary color border for emphasis.</p>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="card-outline"&gt;
+                    &lt;h4 class="text-lg font-semibold"&gt;Outline Card&lt;/h4&gt;
+                    &lt;p&gt;This card uses a primary color border for emphasis.&lt;/p&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Muted Card -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Cards</span>
+                    <h3 class="section-subtitle" style="margin: 0;">card-muted</h3>
+                    <p class="section-desc">Muted card style.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Muted Card</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">card-muted</code> class to create a card with a muted background and lighter text:
+                </p>
+                <div class="">
+                    <div class="card-muted">
+                    <h4 class="text-lg font-semibold">Muted Card</h4>
+                    <p>This card uses a muted background and lighter text for less emphasis.</p>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="card-muted"&gt;
+                    &lt;h4 class="text-lg font-semibold"&gt;Muted Card&lt;/h4&gt;
+                    &lt;p&gt;This card uses a muted background and lighter text for less emphasis.&lt;/p&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Form</h3>
+
+            <!-- Form Component -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle form section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Form</span>
+                    <h3 class="section-subtitle" style="margin: 0;">form</h3>
+                    <p class="section-desc">Basic form component with styled inputs and labels.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic Form</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">form</code> class to create a styled form with proper spacing and element styling:
+                </p>
+                <div class="examples-card">
+                    <form class="form" style="max-width:400px;">
+                    <label>
+                        <span class="block mb-1">Email</span>
+                        <input type="email" placeholder="you@example.com" required>
+                    </label>
+                    <label>
+                        <span class="block mb-1">Message</span>
+                        <textarea rows="3" placeholder="Your message"></textarea>
+                    </label>
+                    <button type="submit" class="btn-primary">Send</button>
+                    </form>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;form class="form"&gt;
+                    &lt;label&gt;
+                        &lt;span class="block mb-1"&gt;Email&lt;/span&gt;
+                        &lt;input type="email" placeholder="you@example.com" required&gt;
+                    &lt;/label&gt;
+                    &lt;label&gt;
+                        &lt;span class="block mb-1"&gt;Message&lt;/span&gt;
+                        &lt;textarea rows="3" placeholder="Your message"&gt;&lt;/textarea&gt;
+                    &lt;/label&gt;
+                    &lt;button type="submit" class="btn-primary"&gt;Send&lt;/button&gt;
+                &lt;/form&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Table</h3>
+
+            <!-- Table Component -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle table section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Table</span>
+                    <h3 class="section-subtitle" style="margin: 0;">table</h3>
+                    <p class="section-desc">Styled table component with proper borders and spacing.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic Table</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">table</code> class to create a styled table with proper borders and spacing:
+                </p>
+                <div class="examples-card">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Alice</td>
+                        <td>Active</td>
+                        <td>Admin</td>
+                        </tr>
+                        <tr>
+                        <td>Bob</td>
+                        <td>Inactive</td>
+                        <td>User</td>
+                        </tr>
+                        <tr>
+                        <td>Charlie</td>
+                        <td>Active</td>
+                        <td>Moderator</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;table class="table"&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                        &lt;th&gt;Name&lt;/th&gt;
+                        &lt;th&gt;Status&lt;/th&gt;
+                        &lt;th&gt;Role&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;Alice&lt;/td&gt;
+                        &lt;td&gt;Active&lt;/td&gt;
+                        &lt;td&gt;Admin&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;Bob&lt;/td&gt;
+                        &lt;td&gt;Inactive&lt;/td&gt;
+                        &lt;td&gt;User&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;Charlie&lt;/td&gt;
+                        &lt;td&gt;Active&lt;/td&gt;
+                        &lt;td&gt;Moderator&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
         </section>
 
-        <section></section>
-            <h2>Images</h2>
-            <div class="flex">
-                <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-thumbnail">
+        <hr class="section-divider" />
+
+        <!-- Typography Section -->
+        <section class="pt-8" id="typography">
+            <h2 class="mb-4">Typography</h2>
+
+            <!-- Headings -->
+            <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">heading</h3>
+                    <p class="section-desc">Default styles for heading elements (h1-h6).</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
             </div>
-            <div>
-                <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-avatar">
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Element</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">h1</span></td><td><code>font-size: 2.5rem; <span class="code-comment">/* 40px */</span><br>font-weight: 700;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h2</span></td><td><code>font-size: 2rem; <span class="code-comment">/* 32px */</span><br>font-weight: 700;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h3</span></td><td><code>font-size: 1.75rem; <span class="code-comment">/* 28px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h4</span></td><td><code>font-size: 1.5rem; <span class="code-comment">/* 24px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h5</span></td><td><code>font-size: 1.25rem; <span class="code-comment">/* 20px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h6</span></td><td><code>font-size: 1rem; <span class="code-comment">/* 16px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Heading Examples</h4>
+                <p class="examples-desc">
+                    Use heading elements for titles and section headers:
+                </p>
+                <div class="examples-card">
+                    <div class="example-row">
+                    <span class="example-label">h1</span>
+                    <h1 style="margin:0">Heading Level 1</h1>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h2</span>
+                    <h2 style="margin:0">Heading Level 2</h2>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h3</span>
+                    <h3 style="margin:0">Heading Level 3</h3>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h4</span>
+                    <h4 style="margin:0">Heading Level 4</h4>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h5</span>
+                    <h5 style="margin:0">Heading Level 5</h5>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;h1&gt;Heading Level 1&lt;/h1&gt;
+                    &lt;h2&gt;Heading Level 2&lt;/h2&gt;
+                    &lt;h3&gt;Heading Level 3&lt;/h3&gt;
+                    &lt;h4&gt;Heading Level 4&lt;/h4&gt;
+                    &lt;h5&gt;Heading Level 5&lt;/h5&gt;
+                </code>
+                </pre>
+                </div>
             </div>
-            <div>
-                <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-round">
-            </div>  
+
+            <!-- Font Size -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font size section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">font-size</h3>
+                    <p class="section-desc">Utilities for controlling the font size of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">text-xs</span></td><td><code>font-size: var(--text-xs); <span class="code-comment">/* 0.75rem (12px) */</span><br>line-height: var(--text-xs-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-sm</span></td><td><code>font-size: var(--text-sm); <span class="code-comment">/* 0.875rem (14px) */</span><br>line-height: var(--text-sm-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-base</span></td><td><code>font-size: var(--text-base); <span class="code-comment">/* 1rem (16px) */</span><br>line-height: var(--text-base-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-lg</span></td><td><code>font-size: var(--text-lg); <span class="code-comment">/* 1.125rem (18px) */</span><br>line-height: var(--text-lg-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-xl</span></td><td><code>font-size: var(--text-xl); <span class="code-comment">/* 1.25rem (20px) */</span><br>line-height: var(--text-xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-2xl</span></td><td><code>font-size: var(--text-2xl); <span class="code-comment">/* 1.5rem (24px) */</span><br>line-height: var(--text-2xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-3xl</span></td><td><code>font-size: var(--text-3xl); <span class="code-comment">/* 1.875rem (30px) */</span><br>line-height: var(--text-3xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-4xl</span></td><td><code>font-size: var(--text-4xl); <span class="code-comment">/* 2.25rem (36px) */</span><br>line-height: var(--text-4xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-5xl</span></td><td><code>font-size: var(--text-5xl); <span class="code-comment">/* 3rem (48px) */</span><br>line-height: var(--text-5xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-6xl</span></td><td><code>font-size: var(--text-6xl); <span class="code-comment">/* 3.75rem (60px) */</span><br>line-height: var(--text-6xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-7xl</span></td><td><code>font-size: var(--text-7xl); <span class="code-comment">/* 4.5rem (72px) */</span><br>line-height: var(--text-7xl-line-height);</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic example</h4>
+                <p class="examples-desc">
+                    Use utilities like <code class="inline-code">text-sm</code> and <code class="inline-code">text-lg</code> to set the font size of an element:
+                </p>
+                <div class="examples-card">
+                    <div class="example-row">
+                    <span class="example-label text-sm">text-sm</span>
+                    <span class="text-sm">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-base">text-base</span>
+                    <span class="text-base">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-lg">text-lg</span>
+                    <span class="text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-xl">text-xl</span>
+                    <span class="text-xl">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-2xl">text-2xl</span>
+                    <span class="text-2xl">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;p class="text-sm"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-base"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-lg"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-xl"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-2xl"&gt;The quick brown fox ...&lt;/p&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Font Weight -->
+            <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">font-weight</h3>
+                    <p class="section-desc">Utilities for controlling the font weight of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">font-thin</span></td><td><code>font-weight: 100;</code></td></tr>
+                    <tr><td><span class="class-name">font-extralight</span></td><td><code>font-weight: 200;</code></td></tr>
+                    <tr><td><span class="class-name">font-light</span></td><td><code>font-weight: 300;</code></td></tr>
+                    <tr><td><span class="class-name">font-normal</span></td><td><code>font-weight: 400;</code></td></tr>
+                    <tr><td><span class="class-name">font-medium</span></td><td><code>font-weight: 500;</code></td></tr>
+                    <tr><td><span class="class-name">font-semibold</span></td><td><code>font-weight: 600;</code></td></tr>
+                    <tr><td><span class="class-name">font-bold</span></td><td><code>font-weight: 700;</code></td></tr>
+                    <tr><td><span class="class-name">font-extrabold</span></td><td><code>font-weight: 800;</code></td></tr>
+                    <tr><td><span class="class-name">font-black</span></td><td><code>font-weight: 900;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic example</h4>
+                <p class="examples-desc">
+                    Use utilities like <code class="inline-code">font-thin</code> and <code class="inline-code">font-bold</code> to set the font weight of an element:
+                </p>
+                <div class="examples-card">
+                    <div class="example-row">
+                    <span class="example-label font-light">font-light</span>
+                    <span class="font-light text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-normal">font-normal</span>
+                    <span class="font-normal text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-medium">font-medium</span>
+                    <span class="font-medium text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-semibold">font-semibold</span>
+                    <span class="font-semibold text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-bold">font-bold</span>
+                    <span class="font-bold text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;p class="font-light"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-normal"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-medium"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-semibold"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-bold"&gt;The quick brown fox ...&lt;/p&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Font Color -->
+            <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
+                <div class="flex justify-center">
+                    <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">color</h3>
+                    <p class="section-desc">Utilities for controlling the text color of an element.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+                </div>
+                <div class="collapsible-content p-3">
+                <table class="docs-table">
+                    <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Styles</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td><span class="class-name">text-black</span></td><td><code>color: var(--color-black); /* #000 */</code></td></tr>
+                    <tr><td><span class="class-name">text-white</span></td><td><code>color: var(--color-white); /* #fff */</code></td></tr>
+                    <tr><td><span class="class-name">text-primary</span></td><td><code>color: var(--color-primary);</code></td></tr>
+                    <tr><td><span class="class-name">text-secondary</span></td><td><code>color: var(--color-secondary);</code></td></tr>
+                    <tr><td><span class="class-name">text-danger</span></td><td><code>color: var(--color-danger);</code></td></tr>
+                    <tr><td><span class="class-name">text-success</span></td><td><code>color: var(--color-success);</code></td></tr>
+                    <tr><td><span class="class-name">text-info</span></td><td><code>color: var(--color-info);</code></td></tr>
+                    <tr><td><span class="class-name">text-dark</span></td><td><code>color: var(--color-dark);</code></td></tr>
+                    <tr><td><span class="class-name">text-light</span></td><td><code>color: var(--color-light);</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <h4 class="examples-title">Basic example</h4>
+                    <p class="examples-desc">
+                    Use utilities like <code class="inline-code">text-primary</code> to set the color of an element:
+                    </p>
+                    <div class="examples-card">
+                    <p class="text-primary text-xl text-center">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                    <pre class="examples-code text-center">
+                    <code>
+                        &lt;p class="text-primary"&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+                    </code>
+                    </pre>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Cards</h2>
-            <div class="card">
-                <h3>Card Title</h3>
-                <p>Card Description</p>
-            </div>
-        </section>
+        <hr class="section-divider" />
 
-        <section>
-            <h2>Grids</h2>
-            <div class="grid">
-                <div class="grid-item">Grid Item 1</div>
+        <!-- Styles Section -->
+        <section class="pt-8" id="styles">
+            <h2 class="mb-4">Styles</h2>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Lists</h3>
+            <!-- Ordered Lists -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Lists</span>
+                    <h3 class="section-subtitle" style="margin: 0;">ordered-lists</h3>
+                    <p class="section-desc">Default styles for ordered lists.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
             </div>
-        </section>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Ordered List</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">ol</code> tag to create a basic ordered list:
+                </p>
+                <div class="examples-card">
+                    <ol class="text-primary">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                        <li>List Item 4</li>
+                        <li>List Item 5</li>
+                    </ol>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;ol class="text-primary"&gt;
+                    &lt;li&gt;List Item 1&lt;/li&gt;
+                    &lt;li&gt;List Item 2&lt;/li&gt;
+                    &lt;li&gt;List Item 3&lt;/li&gt;
+                    &lt;li&gt;List Item 4&lt;/li&gt;
+                    &lt;li&gt;List Item 5&lt;/li&gt;
+                &lt;/ol&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
 
+            <!-- Unordered Lists -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Lists</span>
+                    <h3 class="section-subtitle" style="margin: 0;">unordered-lists</h3>
+                    <p class="section-desc">Default styles for unordered lists.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Unordered List</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">ul</code> tag to create a basic unordered list:
+                </p>
+                <div class="examples-card">
+                    <ul class="text-primary">
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3</li>
+                        <li>List Item 4</li>
+                        <li>List Item 5</li>
+                    </ul>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;ul class="text-primary"&gt;
+                    &lt;li&gt;List Item 1&lt;/li&gt;
+                    &lt;li&gt;List Item 2&lt;/li&gt;
+                    &lt;li&gt;List Item 3&lt;/li&gt;
+                    &lt;li&gt;List Item 4&lt;/li&gt;
+                    &lt;li&gt;List Item 5&lt;/li&gt;
+                &lt;/ul&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold mb-4 pt-5">Links</h3>
+            <!-- Links -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Links</span>
+                    <h3 class="section-subtitle" style="margin: 0;">links</h3>
+                    <p class="section-desc">Default styles for links.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Link</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">a</code> tag to create a basic link:
+                </p>
+                <div class="examples-card">
+                    <a href="#" class="text-primary">Link</a>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;a href="#" class="text-primary"&gt;Link&lt;/a&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- External Links -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Links</span>
+                    <h3 class="section-subtitle" style="margin: 0;">external-links</h3>
+                    <p class="section-desc">Default styles for external links.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default External Link</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">a</code> tag to create a basic external link:
+                </p>
+                <div class="examples-card">
+                    <a href="https://www.google.com" class="text-primary" target="_blank">External Link</a>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;a href="https://www.google.com" class="text-primary" target="_blank"&gt;External Link&lt;/a&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Colors</h3>
+            <!-- Colors -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Colors</span>
+                    <h3 class="section-subtitle" style="margin: 0;">colors</h3>
+                    <p class="section-desc">Default styles for colors.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Colors</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">bg-primary</code> class to create a basic color:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 font-semibold">
+                    <div class="bg-primary rounded-lg flex justify-center items-center flex-1 h-xs">
+                      <p class="text-dark">.bg-primary</p>
+                    </div>
+                    <div class="bg-secondary rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-secondary</p>
+                    </div>
+                    <div class="bg-danger rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-danger</p>
+                    </div>
+                    <div class="bg-success rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-success</p>
+                    </div>
+                    <div class="bg-info rounded-lg flex justify-center items-center flex-1 min-w-[150px] h-[200px]">
+                      <p class="text-dark">.bg-info</p>
+                    </div>
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="bg-primary"&gt;
+                        &lt;p class="text-dark"&gt;.bg-primary&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-secondary"&gt;
+                        &lt;p class="text-dark"&gt;.bg-secondary&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-danger"&gt;
+                        &lt;p class="text-dark"&gt;.bg-danger&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-success"&gt;
+                        &lt;p class="text-dark"&gt;.bg-success&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="bg-info"&gt;
+                        &lt;p class="text-dark"&gt;.bg-info&lt;/p&gt;
+                    &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Buttons</h3>
+            <!-- Buttons -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Buttons</span>
+                    <h3 class="section-subtitle" style="margin: 0;">buttons</h3>
+                    <p class="section-desc">Default styles for buttons.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Buttons</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">btn-primary</code> class to create a basic button:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 font-semibold justify-center">
+                   
+                    <button class="btn-primary">Click me!</button>
+                    <a href="#" class="btn-secondary">Link Button</a>
+                    <button class="btn-danger">Click me!</button>
+                    <button class="btn-success">Click me!</button>
+                    <button class="btn-info">Click me!</button>
+                    
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;button class="btn-primary"&gt;Click me!&lt;/button&gt;
+                    &lt;a href="#" class="btn-secondary"&gt;Link Button&lt;/a&gt;
+                    &lt;button class="btn-danger"&gt;Click me!&lt;/button&gt;
+                    &lt;button class="btn-success"&gt;Click me!&lt;/button&gt;
+                    &lt;button class="btn-info"&gt;Click me!&lt;/button&gt;
+                    
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Images</h3>
+            <!-- Images -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Images</span>
+                    <h3 class="section-subtitle" style="margin: 0;">images</h3>
+                    <p class="section-desc">Default styles for images.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Images</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">img</code> tag to create a basic image:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 font-semibold justify-center">
+                   
+                    <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-thumbnail">
+                    <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-avatar">
+                    <img src="https://placehold.co/300" alt="Placeholder Image" class="img img-round">
+                    
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;img src="https://placehold.co/300" alt="Placeholder Image" class="img img-thumbnail"&gt;
+                    &lt;img src="https://placehold.co/300" alt="Placeholder Image" class="img img-avatar"&gt;
+                    &lt;img src="https://placehold.co/300" alt="Placeholder Image" class="img img-round"&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-4 pt-5">Borders</h3>
+            <!-- Border -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Border</span>
+                    <h3 class="section-subtitle" style="margin: 0;">border</h3>
+                    <p class="section-desc">Default styles for borders.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Borders</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">section-divider</code> class to create a basic border:
+                </p>
+                <div class=" flex flex-wrap gap-4 font-semibold justify-center">
+                    <div class="section-divider w-full"></div>
+                  </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="section-divider w-full"&gt;&lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+        </section>
     </div>
     
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme preference or use system preference
+        const currentTheme = localStorage.getItem('theme') || 
+            (prefersDarkScheme.matches ? 'dark' : 'light');
+        
+        // Set initial theme
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        themeToggle.setAttribute('data-theme', currentTheme);
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeToggle.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Collapsible functionality
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('.font-size-toggle, .font-weight-toggle, .text-color-toggle').forEach(function(toggle) {
+            const collapsibleContent = toggle.nextElementSibling;
+            const toggleIcon = toggle.querySelector('.toggle-icon');
+            if (collapsibleContent && collapsibleContent.classList.contains('collapsible-content')) {
+              toggle.addEventListener('click', function() {
+                collapsibleContent.classList.toggle('expanded');
+                if (toggleIcon) {
+                  toggleIcon.style.transform = collapsibleContent.classList.contains('expanded')
+                    ? 'rotate(180deg)'
+                    : 'rotate(0)';
+                }
+              });
+            }
+          });
+        });
+    </script>
 </body>
 </html>

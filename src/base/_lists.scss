@@ -1,17 +1,49 @@
 @use '../variables/theme';
 @use '../variables/sizing';
 
-ul, ol, dl {
-    padding-left: map-get(sizing.$spacing, 4);
-    padding-top: map-get(sizing.$spacing, 3);
-    padding-bottom: map-get(sizing.$spacing, 3);
+ul,
+ol {
+  padding-left: map-get(sizing.$spacing, 6); 
+  padding-top: map-get(sizing.$spacing, 4);
+  padding-bottom: map-get(sizing.$spacing, 4);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 ul {
-    list-style-type: theme.$list-bullet;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 ol {
-    list-style-type: theme.$list-number;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+// List styles
+.list-none {
+  list-style-type: none;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+}
+
+// Table layout
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 

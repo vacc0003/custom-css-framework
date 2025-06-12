@@ -1,0 +1,330 @@
+// General documentation styles moved from _typography.scss
+
+.section-subtitle {
+  font-family: 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+
+.section-label {
+  font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a3a3a3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-desc {
+  font-family: 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a3a3a3;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  letter-spacing: 0;
+}
+
+.docs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+  background: none;
+  font-size: 13px;
+  color: var(--text-color);
+
+  th, td {
+    padding: 0.5rem 1.25rem 0.5rem 0;
+    text-align: left;
+    font-size: 13px;
+    vertical-align: top;
+    background: none;
+    border: none;
+    line-height: 1.5;
+  }
+
+  th {
+    font-family: 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    color: #030712 !important;
+    background: transparent !important;
+    padding: 8px 0 8px 0 !important;
+    text-align: left !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    border: none !important;
+    border-bottom: 1.5px solid var(--border-color) !important;
+    line-height: 1.5 !important;
+  }
+
+  [data-theme="dark"] th,
+  html[data-theme="dark"] th {
+    color: #fff !important;
+  }
+
+  tr:last-child td {
+    border-bottom: 1.5px solid var(--border-color);
+  }
+
+  .class-name,
+  .class-name-alt,
+  code,
+  .code-comment {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .class-name {
+    color: #38adfa;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-weight: 500;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover { color: #0ea5e9; }
+  }
+
+  .class-name-alt {
+    color: #7dd3fc;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-style: italic;
+    font-weight: 500;
+    background: none;
+  }
+
+  code {
+    font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+    color: #a78bfa;
+    background: none;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    opacity: 1;
+    white-space: pre-line;
+  }
+
+  .code-comment {
+    color: #a3a3a3;
+    font-style: italic;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  }
+}
+
+[data-theme="dark"] .docs-table th,
+html[data-theme="dark"] .docs-table th,
+.docs-table [data-theme="dark"] th,
+.docs-table html[data-theme="dark"] th {
+  color: #fff !important;
+}
+
+.examples-section {
+  margin-top: 3rem;
+  color: var(--text-color);
+}
+
+.examples-section-card {
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
+.examples-label {
+  font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: #a3a3a3;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.examples-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.examples-desc {
+  color: #a3a3a3;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.examples-card, .examples-code {
+  background: #f3f4f6;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.example-label, .example-row span {
+  color: #18181b;
+}
+
+[data-theme="dark"] .examples-card, [data-theme="dark"] .examples-code, html[data-theme="dark"] .examples-card, html[data-theme="dark"] .examples-code {
+  background: #18181b;
+}
+
+[data-theme="dark"] .example-label, [data-theme="dark"] .example-row span {
+  color: #f1f5f9;
+}
+
+.example-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.examples-code, pre code {
+  white-space: pre;
+}
+
+.examples-code {
+  font-size: 13px;
+  background: #f3f4f6;
+  color: #23232b;
+  border-radius: 0.75rem;
+  padding: .5rem 1.5rem;
+  margin-bottom: 0;
+  border: none;
+  overflow-x: auto;
+}
+
+[data-theme="dark"] .examples-code,
+html[data-theme="dark"] .examples-code {
+  background: #18181b;
+  color: #fff;
+}
+
+.example-grid-box {
+  background: #b46af0;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: .8rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 1.2rem 1rem;
+  transition: background 0.2s;
+}
+
+.example-flex-direction-box {
+  background: #d946ef;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: .8rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin:  0;
+  transition: background 0.2s;
+}
+
+.example-flex-wrap-bg {
+  background: #f3f4f6;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.example-flex-wrap-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(0,0,0,0.04) 0 8px, transparent 8px 16px);
+  border-radius: 1rem;
+  pointer-events: none;
+}
+[data-theme="dark"] .example-flex-wrap-bg,
+html[data-theme="dark"] .example-flex-wrap-bg {
+  background: #181922;
+}
+[data-theme="dark"] .example-flex-wrap-bg::before,
+html[data-theme="dark"] .example-flex-wrap-bg::before {
+  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0 8px, transparent 8px 16px);
+}
+.example-flex-wrap-box {
+  background: #818cf8;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: .8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  min-width: 220px;
+  height: 64px;
+  transition: background 0.2s;
+}
+
+.example-flex-box {
+  background: #F6339A;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: .8rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+} 
+
+.example-flex-none-box {
+  background: #f6339bb0;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: .8rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin:  0;
+  transition: background 0.2s;
+}
+
+.example-grid-cell {
+  background: #f7f8fa;
+  border: 1px solid #e3e6ee;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dark .example-grid-cell,
+[data-theme="dark"] .example-grid-cell {
+  background: #1C202A;
+  border: 1px solid #272E3D;
+}
