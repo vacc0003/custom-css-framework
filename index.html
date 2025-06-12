@@ -11,23 +11,242 @@
     <nav class="main-nav">
       <div class="nav-container">
         <div class="nav-logo">🪶 <span class="pl-2">tailfeathercss</span></div>
-        <ul class="nav-items">
+        <ul class="nav-items sm:hidden">
           <li class="nav-item"><a href="#" class="nav-link active">Layout</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Forms</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Components</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Typography</a></li>
           <li class="nav-item"><a href="#" class="nav-link pr-4">Styles</a></li>
-          <li class="nav-item nav-toggle"><button class="theme-toggle" aria-label="Toggle theme" data-theme="light"></button></li>
+          <li class="nav-item nav-toggle pl-2 "><button class="theme-toggle" aria-label="Toggle theme" data-theme="light"></button></li>
         </ul>
       </div>
     </nav>
     <div class="container px-4">
 
         <section>
-            <h2>Grids</h2>
-            <div class="grid">
-                <div class="grid-item">Grid Item 1</div>
+            <h2 class="mb-4">Layout</h2>
+            <h3 class="text-xl font-semibold mb-4 pt-5">Flexbox & Grid</h3>
+            <!-- Flex Basis -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex-basis</h3>
+                    <p class="section-desc">Utilities for controlling the initial size of flex items.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+                </div>
+                <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">basis-&lt;number&gt;</span></td><td><code>flex-basis: calc(var(--spacing) * &lt;number&gt;);</code></td></tr>
+                    <tr><td><span class="class-name">basis-full</span></td><td><code>flex-basis: 100%;</code></td></tr>
+                    <tr><td><span class="class-name">basis-auto</span></td><td><code>flex-basis: auto;</code></td></tr>
+                    <tr><td><span class="class-name">basis-3xs</span></td><td><code>flex-basis: var(--container-3xs); <span class="code-comment">/* 16rem (256px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-2xs</span></td><td><code>flex-basis: var(--container-2xs); <span class="code-comment">/* 18rem (288px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-xs</span></td><td><code>flex-basis: var(--container-xs); <span class="code-comment">/* 20rem (320px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-sm</span></td><td><code>flex-basis: var(--container-sm); <span class="code-comment">/* 24rem (384px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-md</span></td><td><code>flex-basis: var(--container-md); <span class="code-comment">/* 28rem (448px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-lg</span></td><td><code>flex-basis: var(--container-lg); <span class="code-comment">/* 32rem (512px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-xl</span></td><td><code>flex-basis: var(--container-xl); <span class="code-comment">/* 36rem (576px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-2xl</span></td><td><code>flex-basis: var(--container-2xl); <span class="code-comment">/* 42rem (672px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-3xl</span></td><td><code>flex-basis: var(--container-3xl); <span class="code-comment">/* 48rem (768px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-4xl</span></td><td><code>flex-basis: var(--container-4xl); <span class="code-comment">/* 56rem (896px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-5xl</span></td><td><code>flex-basis: var(--container-5xl); <span class="code-comment">/* 64rem (1024px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-6xl</span></td><td><code>flex-basis: var(--container-6xl); <span class="code-comment">/* 72rem (1152px) */</span></code></td></tr>
+                    <tr><td><span class="class-name">basis-7xl</span></td><td><code>flex-basis: var(--container-7xl); <span class="code-comment">/* 80rem (1280px) */</span></code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Using the spacing scale</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">basis-&lt;number&gt;</code> utilities like <code class="inline-code">basis-64</code> and <code class="inline-code">basis-128</code> to set the initial size of flex items based on the spacing scale:
+                </p>
+                <div class="examples-card flex flex-row gap-4 py-4">
+                    <div class="basis-1/4 example-grid-box">01</div>
+                    <div class="basis-1/4 example-grid-box">02</div>
+                    <div class="basis-2/4 example-grid-box">03</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="flex flex-row"&gt;
+                    &lt;div class="basis-1/4"&gt;01&lt;/div&gt;
+                    &lt;div class="basis-1/4"&gt;02&lt;/div&gt;
+                    &lt;div class="basis-2/4"&gt;03&lt;/div&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- Flex Direction -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-direction section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex-direction</h3>
+                    <p class="section-desc">Utilities for controlling the direction of flex items.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">flex-row</span></td><td><code>flex-direction: row;</code></td></tr>
+                    <tr><td><span class="class-name">flex-row-reverse</span></td><td><code>flex-direction: row-reverse;</code></td></tr>
+                    <tr><td><span class="class-name">flex-col</span></td><td><code>flex-direction: column;</code></td></tr>
+                    <tr><td><span class="class-name">flex-col-reverse</span></td><td><code>flex-direction: column-reverse;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Row</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">flex-row</code> to position flex items horizontally in the same direction as text:
+                </p>
+                <div class="examples-card flex flex-row gap-3 py-4">
+                    <div class="example-flex-direction-box">01</div>
+                    <div class="example-flex-direction-box">02</div>
+                    <div class="example-flex-direction-box">03</div>
+                </div>
+                <pre class="examples-code">
+<code>
+&lt;div class="flex flex-row ..."&gt;
+    &lt;div&gt;01&lt;/div&gt;
+    &lt;div&gt;02&lt;/div&gt;
+    &lt;div&gt;03&lt;/div&gt;
+&lt;/div&gt;
+</code>
+                </pre>
+                </div>
+            </div>
+            <!-- Flex Wrap -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-wrap section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex-wrap</h3>
+                    <p class="section-desc">Utilities for controlling how flex items wrap.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">flex-nowrap</span></td><td><code>flex-wrap: nowrap;</code></td></tr>
+                    <tr><td><span class="class-name">flex-wrap</span></td><td><code>flex-wrap: wrap;</code></td></tr>
+                    <tr><td><span class="class-name">flex-wrap-reverse</span></td><td><code>flex-wrap: wrap-reverse;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Wrap normally</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">flex-wrap</code> to allow flex items to wrap:
+                </p>
+                <div class="examples-card flex flex-wrap gap-4 py-4 example-flex-wrap-bg">
+                    <div class="example-flex-wrap-box">01</div>
+                    <div class="example-flex-wrap-box">02</div>
+                    <div class="example-flex-wrap-box">03</div>
+                </div>
+                <pre class="examples-code">
+                    <code>
+                    &lt;div class="flex flex-wrap"&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                    &lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
+            </div>
+            <!-- Flex -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">flex</h3>
+                    <p class="section-desc">Utilities for controlling how flex items both grow and shrink.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">flex-&lt;number&gt;</span></td><td><code>flex: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">flex-&lt;fraction&gt;</span></td><td><code>flex: calc(&lt;fraction&gt; * 100%);</code></td></tr>
+                    <tr><td><span class="class-name">flex-auto</span></td><td><code>flex: 1 1 auto;</code></td></tr>
+                    <tr><td><span class="class-name">flex-initial</span></td><td><code>flex: 0 1 auto;</code></td></tr>
+                    <tr><td><span class="class-name">flex-none</span></td><td><code>flex: none;</code></td></tr>
+                    <tr><td><span class="class-name">flex-[value]</span></td><td><code>flex: &lt;value&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">grow</span></td><td><code>flex-grow: 1;</code></td></tr>
+                    <tr><td><span class="class-name">grow-&lt;number&gt;</span></td><td><code>flex-grow: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">grow-[value]</span></td><td><code>flex-grow: &lt;value&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">shrink</span></td><td><code>flex-shrink: 1;</code></td></tr>
+                    <tr><td><span class="class-name">shrink-&lt;number&gt;</span></td><td><code>flex-shrink: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">shrink-[value]</span></td><td><code>flex-shrink: &lt;value&gt;;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic example</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">flex-&lt;number&gt;</code> utilities like <code class="inline-code">flex-1</code> to allow a flex item to grow and shrink as needed, ignoring its initial size:
+                </p>
+                <div class="examples-card flex flex-row gap-3 py-4 example-flex-wrap-bg" style="overflow-x:auto;">
+                    <div class="w-14 flex-none example-flex-none-box">01</div>
+                    <div class="w-auto flex-1 example-flex-box">02</div>
+                    <div class="w-auto flex-1 example-flex-box">03</div>
+                </div>
+                <pre class="examples-code">
+                    <code>
+                    &lt;div class="flex"&gt;
+                    &lt;div class="w-14 flex-none ..."&gt;01&lt;/div&gt;
+                    &lt;div class="w-auto flex-1 ..."&gt;02&lt;/div&gt;
+                    &lt;div class="w-auto flex-1 ..."&gt;03&lt;/div&gt;
+                    &lt;/div&gt;
+                    </code>
+                </pre>
+                </div>
             </div>
         </section>
+
+        
 
         <hr class="section-divider" />
         
