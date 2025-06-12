@@ -108,15 +108,61 @@ $spacing: (
 }
 
 $sizes: (
-  xs: 0.75rem,     // 12px
-  sm: 0.875rem,    // 14px
-  base: 1rem,      // 16px
-  lg: 1.125rem,    // 18px
-  xl: 1.25rem,     // 20px
-  '2xl': 1.5rem,   // 24px
-  '3xl': 1.875rem, // 30px
-  '4xl': 2.25rem,  // 36px
-  '5xl': 3rem,     // 48px
-  '6xl': 3.75rem,  // 60px
-  '7xl': 4.5rem    // 72px
+  xs: 0.75rem,
+  sm: 0.875rem, 
+  base: 1rem, 
+  lg: 1.125rem,
+  xl: 1.25rem,  
+  '2xl': 1.5rem, 
+  '3xl': 1.875rem, 
+  '4xl': 2.25rem, 
+  '5xl': 3rem,    
+  '6xl': 3.75rem, 
+  '7xl': 4.5rem   
 );
+
+$container-widths: (
+  '3xs': var(--container-3xs),
+  '2xs': var(--container-2xs),
+  'xs': var(--container-xs),  
+  'sm': var(--container-sm),  
+  'md': var(--container-md),  
+  'lg': var(--container-lg),   
+  'xl': var(--container-xl),   
+  '2xl': var(--container-2xl),
+  '3xl': var(--container-3xl),
+  '4xl': var(--container-4xl),
+  '5xl': var(--container-5xl),
+  '6xl': var(--container-6xl), 
+  '7xl': var(--container-7xl) 
+);
+
+@each $key, $value in $container-widths {
+  .w-#{$key} { width: #{$value} !important; }
+  .min-w-#{$key} { min-width: #{$value} !important; }
+  .max-w-#{$key} { max-width: #{$value} !important; }
+}
+
+@each $key, $value in $container-widths {
+  .h-#{$key} { height: #{$value} !important; }
+  .min-h-#{$key} { min-height: #{$value} !important; }
+  .max-h-#{$key} { max-height: #{$value} !important; }
+}
+
+.w-auto { width: auto !important; }
+.w-full { width: 100% !important; }
+.w-screen { width: 100vw !important; }
+
+.h-auto { height: auto !important; }
+.h-full { height: 100% !important; }
+.h-screen { height: 100vh !important; }
+
+.min-w-0 { min-width: 0 !important; }
+.min-w-full { min-width: 100% !important; }
+.max-w-none { max-width: none !important; }
+.max-w-full { max-width: 100% !important; }
+
+.min-h-0 { min-height: 0 !important; }
+.min-h-full { min-height: 100% !important; }
+.max-h-none { max-height: none !important; }
+.max-h-full { max-height: 100% !important; }

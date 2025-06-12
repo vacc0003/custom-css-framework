@@ -444,3 +444,27 @@
   }
 }
 
+// Background opacity utilities
+.bg-opacity-0    { --bg-opacity: 0 !important; }
+.bg-opacity-5    { --bg-opacity: 0.05 !important; }
+.bg-opacity-10   { --bg-opacity: 0.10 !important; }
+.bg-opacity-20   { --bg-opacity: 0.20 !important; }
+.bg-opacity-25   { --bg-opacity: 0.25 !important; }
+.bg-opacity-30   { --bg-opacity: 0.30 !important; }
+.bg-opacity-40   { --bg-opacity: 0.40 !important; }
+.bg-opacity-50   { --bg-opacity: 0.50 !important; }
+.bg-opacity-60   { --bg-opacity: 0.60 !important; }
+.bg-opacity-70   { --bg-opacity: 0.70 !important; }
+.bg-opacity-75   { --bg-opacity: 0.75 !important; }
+.bg-opacity-80   { --bg-opacity: 0.80 !important; }
+.bg-opacity-90   { --bg-opacity: 0.90 !important; }
+.bg-opacity-95   { --bg-opacity: 0.95 !important; }
+.bg-opacity-100  { --bg-opacity: 1 !important; }
+
+// To use, set background-color with rgba and var(--bg-opacity), e.g.:
+// background-color: rgba(34, 182, 246, var(--bg-opacity));
+
+// Box sizing utilities
+.box-border { box-sizing: border-box !important; }
+.box-content { box-sizing: content-box !important; }
+
