@@ -1,4 +1,3 @@
-// Card Styles
 .card {
   background: var(--bg-color, #fff);
   border-radius: 0.75rem;
@@ -27,14 +26,12 @@
   padding: 2rem 1.5rem;
 }
 
-// Dark mode for card-muted
 [data-theme="dark"] .card-muted {
   background: #18181B;
   color: #a3a3a3;
   border-color: #18181B;
 }
 
-// Form Style
 .form {
   background: var(--bg-color, #fff);
   border-radius: 0.75rem;
@@ -65,7 +62,6 @@
   background: #fff;
 }
 
-// Dark mode for form inputs
 [data-theme="dark"] .form input,
 [data-theme="dark"] .form input[type="text"],
 [data-theme="dark"] .form input[type="email"],
@@ -84,7 +80,6 @@
   border-color: #00BCFF;
 }
 
-// Dark mode input text color override (ensure this is last)
 [data-theme="dark"] .form input,
 [data-theme="dark"] .form input[type="text"],
 [data-theme="dark"] .form input[type="email"],
@@ -95,7 +90,6 @@
   color: #f3f4f6 !important;
 }
 
-// Table Style
 .table {
   width: 100%;
   border-collapse: separate;
@@ -124,7 +118,6 @@
   border-bottom: none;
 }
 
-// Dark mode for table headers
 [data-theme="dark"] .table th {
   background: #18181B;
   color: #f1f5f9;
