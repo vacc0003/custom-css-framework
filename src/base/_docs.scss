@@ -130,6 +130,11 @@ html[data-theme="dark"] .docs-table th,
   color: var(--text-color);
 }
 
+.examples-section-card {
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
 .examples-label {
   font-family: 'IBM Plex Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
   font-size: 12px;

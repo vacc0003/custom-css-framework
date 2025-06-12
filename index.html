@@ -1103,288 +1103,534 @@
         <section class="components-docs" style="margin-top: 4rem;">
             <h2 class="mb-4">Components</h2>
 
-            <h3 class="text-xl font-semibold mb-4 pt-5">Card Examples</h3>
-            <div class="card" style="margin-bottom:2rem;">
-            <h4 class="text-lg font-semibold">Default Card</h4>
-            <p>This is a default card. It uses a subtle border, background, and shadow.</p>
+            <!-- Cards -->
+            <h3 class="text-xl font-semibold mb-4 pt-5">Cards</h3>
+
+            <!-- Default Card -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Components</span>
+                    <h3 class="section-subtitle" style="margin: 0;">card</h3>
+                    <p class="section-desc">Default card style.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
             </div>
-            <div class="card-outline" style="margin-bottom:2rem;">
-            <h4 class="text-lg font-semibold">Outline Card</h4>
-            <p>This card uses a primary color border for emphasis.</p>
-            </div>
-            <div class="card-muted" style="margin-bottom:2rem;">
-            <h4 class="text-lg font-semibold">Muted Card</h4>
-            <p>This card uses a muted background and lighter text for less emphasis.</p>
-            </div>
-
-            <h3 class="text-xl font-semibold mb-4 pt-5">Form Example</h3>
-            <form class="form" style="max-width:400px; margin-bottom:2rem;">
-            <label>
-                <span class="block mb-1">Email</span>
-                <input type="email" placeholder="you@example.com" required>
-            </label>
-            <label>
-                <span class="block mb-1">Message</span>
-                <textarea rows="3" placeholder="Your message"></textarea>
-            </label>
-            <button type="submit" class="btn-primary">Send</button>
-            </form>
-
-            <h3 class="text-xl font-semibold mb-4 pt-5">Table Example</h3>
-            <table class="table" style="margin-bottom:2rem;">
-            <thead>
-                <tr>
-                <th>Name</th>
-                <th>Status</th>
-                <th>Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>Alice</td>
-                <td>Active</td>
-                <td>Admin</td>
-                </tr>
-                <tr>
-                <td>Bob</td>
-                <td>Inactive</td>
-                <td>User</td>
-                </tr>
-                <tr>
-                <td>Charlie</td>
-                <td>Active</td>
-                <td>Moderator</td>
-                </tr>
-            </tbody>
-            </table>
-        </section>
-
-        <hr class="section-divider" />
-
-        <section>
-            <h2>Typography</h2>
-            <!-- <p class="text-primary">.text-primary</p>
-            <p class="text-secondary">.text-secondary</p>
-            <p class="text-danger">.text-danger</p>
-            <p class="text-success">.text-success</p>
-            <p class="text-info">.text-info</p>
-            <p class="text-dark">.text-dark</p>
-            <p class="text-light">.text-light</p> -->
-
-            <div class="typography-docs">
-
-                <!-- Font Size -->
-                <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font size section">
-                    <div class="flex justify-center">
-                    <div>
-                        <span class="section-label">Typography</span>
-                        <h3 class="section-subtitle" style="margin: 0;">font-size</h3>
-                        <p class="section-desc">Utilities for controlling the font size of an element.</p>
-                    </div>
-                    </div>
-                    <div class="flex justify-center">
-                    <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Default Card</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">card</code> class to create a basic card with subtle border, background, and shadow:
+                </p>
+                <div class="examples-card">
+                    <div class="card">
+                    <h4 class="text-lg font-semibold">Default Card</h4>
+                    <p>This is a default card. It uses a subtle border, background, and shadow.</p>
                     </div>
                 </div>
-                <div class="collapsible-content px-3 py-1">
-                    <table class="docs-table">
+                <pre class="examples-code">
+                <code>
+                &lt;div class="card"&gt;
+                    &lt;h4 class="text-lg font-semibold"&gt;Default Card&lt;/h4&gt;
+                    &lt;p&gt;This is a default card. It uses a subtle border, background, and shadow.&lt;/p&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Outline Card -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Components</span>
+                    <h3 class="section-subtitle" style="margin: 0;">card-outline</h3>
+                    <p class="section-desc">Outline card style.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Outline Card</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">card-outline</code> class to create a card with a primary color border for emphasis:
+                </p>
+                <div class="examples-card">
+                    <div class="card-outline">
+                    <h4 class="text-lg font-semibold">Outline Card</h4>
+                    <p>This card uses a primary color border for emphasis.</p>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="card-outline"&gt;
+                    &lt;h4 class="text-lg font-semibold"&gt;Outline Card&lt;/h4&gt;
+                    &lt;p&gt;This card uses a primary color border for emphasis.&lt;/p&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Muted Card -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle flex-basis section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Components</span>
+                    <h3 class="section-subtitle" style="margin: 0;">card-muted</h3>
+                    <p class="section-desc">Muted card style.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Muted Card</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">card-muted</code> class to create a card with a muted background and lighter text:
+                </p>
+                <div class="">
+                    <div class="card-muted">
+                    <h4 class="text-lg font-semibold">Muted Card</h4>
+                    <p>This card uses a muted background and lighter text for less emphasis.</p>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;div class="card-muted"&gt;
+                    &lt;h4 class="text-lg font-semibold"&gt;Muted Card&lt;/h4&gt;
+                    &lt;p&gt;This card uses a muted background and lighter text for less emphasis.&lt;/p&gt;
+                &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Form Component -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle form section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Components</span>
+                    <h3 class="section-subtitle" style="margin: 0;">form</h3>
+                    <p class="section-desc">Basic form component with styled inputs and labels.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic Form</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">form</code> class to create a styled form with proper spacing and element styling:
+                </p>
+                <div class="examples-card">
+                    <form class="form" style="max-width:400px;">
+                    <label>
+                        <span class="block mb-1">Email</span>
+                        <input type="email" placeholder="you@example.com" required>
+                    </label>
+                    <label>
+                        <span class="block mb-1">Message</span>
+                        <textarea rows="3" placeholder="Your message"></textarea>
+                    </label>
+                    <button type="submit" class="btn-primary">Send</button>
+                    </form>
+                </div>
+                <pre class="examples-code">
+                <code>
+                &lt;form class="form"&gt;
+                    &lt;label&gt;
+                        &lt;span class="block mb-1"&gt;Email&lt;/span&gt;
+                        &lt;input type="email" placeholder="you@example.com" required&gt;
+                    &lt;/label&gt;
+                    &lt;label&gt;
+                        &lt;span class="block mb-1"&gt;Message&lt;/span&gt;
+                        &lt;textarea rows="3" placeholder="Your message"&gt;&lt;/textarea&gt;
+                    &lt;/label&gt;
+                    &lt;button type="submit" class="btn-primary"&gt;Send&lt;/button&gt;
+                &lt;/form&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Table Component -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle table section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Components</span>
+                    <h3 class="section-subtitle" style="margin: 0;">table</h3>
+                    <p class="section-desc">Styled table component with proper borders and spacing.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                
+                <div class="examples-section-card">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic Table</h4>
+                <p class="examples-desc">
+                    Use the <code class="inline-code">table</code> class to create a styled table with proper borders and spacing:
+                </p>
+                <div class="examples-card">
+                    <table class="table">
                     <thead>
                         <tr>
-                        <th>Class</th>
-                        <th>Styles</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Role</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><span class="class-name">text-xs</span></td><td><code>font-size: var(--text-xs); <span class="code-comment">/* 0.75rem (12px) */</span><br>line-height: var(--text-xs-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-sm</span></td><td><code>font-size: var(--text-sm); <span class="code-comment">/* 0.875rem (14px) */</span><br>line-height: var(--text-sm-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-base</span></td><td><code>font-size: var(--text-base); <span class="code-comment">/* 1rem (16px) */</span><br>line-height: var(--text-base-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-lg</span></td><td><code>font-size: var(--text-lg); <span class="code-comment">/* 1.125rem (18px) */</span><br>line-height: var(--text-lg-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-xl</span></td><td><code>font-size: var(--text-xl); <span class="code-comment">/* 1.25rem (20px) */</span><br>line-height: var(--text-xl-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-2xl</span></td><td><code>font-size: var(--text-2xl); <span class="code-comment">/* 1.5rem (24px) */</span><br>line-height: var(--text-2xl-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-3xl</span></td><td><code>font-size: var(--text-3xl); <span class="code-comment">/* 1.875rem (30px) */</span><br>line-height: var(--text-3xl-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-4xl</span></td><td><code>font-size: var(--text-4xl); <span class="code-comment">/* 2.25rem (36px) */</span><br>line-height: var(--text-4xl-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-5xl</span></td><td><code>font-size: var(--text-5xl); <span class="code-comment">/* 3rem (48px) */</span><br>line-height: var(--text-5xl-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-6xl</span></td><td><code>font-size: var(--text-6xl); <span class="code-comment">/* 3.75rem (60px) */</span><br>line-height: var(--text-6xl-line-height);</code></td></tr>
-                        <tr><td><span class="class-name">text-7xl</span></td><td><code>font-size: var(--text-7xl); <span class="code-comment">/* 4.5rem (72px) */</span><br>line-height: var(--text-7xl-line-height);</code></td></tr>
+                        <tr>
+                        <td>Alice</td>
+                        <td>Active</td>
+                        <td>Admin</td>
+                        </tr>
+                        <tr>
+                        <td>Bob</td>
+                        <td>Inactive</td>
+                        <td>User</td>
+                        </tr>
+                        <tr>
+                        <td>Charlie</td>
+                        <td>Active</td>
+                        <td>Moderator</td>
+                        </tr>
                     </tbody>
                     </table>
-                    <div class="examples-section">
-                    <span class="examples-label">EXAMPLES</span>
-                    <h4 class="examples-title">Basic example</h4>
-                    <p class="examples-desc">
-                        Use utilities like <code class="inline-code">text-sm</code> and <code class="inline-code">text-lg</code> to set the font size of an element:
-                    </p>
-                    <div class="examples-card">
-                        <div class="example-row">
-                        <span class="example-label text-sm">text-sm</span>
-                        <span class="text-sm">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label text-base">text-base</span>
-                        <span class="text-base">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label text-lg">text-lg</span>
-                        <span class="text-lg">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label text-xl">text-xl</span>
-                        <span class="text-xl">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label text-2xl">text-2xl</span>
-                        <span class="text-2xl">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                    </div>
-                    <pre class="examples-code">
-                    <code>
-                        &lt;p class="text-sm"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="text-base"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="text-lg"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="text-xl"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="text-2xl"&gt;The quick brown fox ...&lt;/p&gt;
-                    </code>
-                    </pre>
-                    </div>
                 </div>
-
-                <!-- Font Weight -->
-                <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
-                    <div class="flex justify-center">
-                    <div>
-                        <span class="section-label">Typography</span>
-                        <h3 class="section-subtitle" style="margin: 0;">font-weight</h3>
-                        <p class="section-desc">Utilities for controlling the font weight of an element.</p>
-                    </div>
-                    </div>
-                    <div class="flex justify-center">
-                    <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
-                    </div>
+                <pre class="examples-code">
+                <code>
+                &lt;table class="table"&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                        &lt;th&gt;Name&lt;/th&gt;
+                        &lt;th&gt;Status&lt;/th&gt;
+                        &lt;th&gt;Role&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;Alice&lt;/td&gt;
+                        &lt;td&gt;Active&lt;/td&gt;
+                        &lt;td&gt;Admin&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;Bob&lt;/td&gt;
+                        &lt;td&gt;Inactive&lt;/td&gt;
+                        &lt;td&gt;User&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;Charlie&lt;/td&gt;
+                        &lt;td&gt;Active&lt;/td&gt;
+                        &lt;td&gt;Moderator&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+                </code>
+                </pre>
                 </div>
-                <div class="collapsible-content px-3 py-1">
-                    <table class="docs-table">
-                    <thead>
-                        <tr>
-                        <th>Class</th>
-                        <th>Styles</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><span class="class-name">font-thin</span></td><td><code>font-weight: 100;</code></td></tr>
-                        <tr><td><span class="class-name">font-extralight</span></td><td><code>font-weight: 200;</code></td></tr>
-                        <tr><td><span class="class-name">font-light</span></td><td><code>font-weight: 300;</code></td></tr>
-                        <tr><td><span class="class-name">font-normal</span></td><td><code>font-weight: 400;</code></td></tr>
-                        <tr><td><span class="class-name">font-medium</span></td><td><code>font-weight: 500;</code></td></tr>
-                        <tr><td><span class="class-name">font-semibold</span></td><td><code>font-weight: 600;</code></td></tr>
-                        <tr><td><span class="class-name">font-bold</span></td><td><code>font-weight: 700;</code></td></tr>
-                        <tr><td><span class="class-name">font-extrabold</span></td><td><code>font-weight: 800;</code></td></tr>
-                        <tr><td><span class="class-name">font-black</span></td><td><code>font-weight: 900;</code></td></tr>
-                    </tbody>
-                    </table>
-                    <div class="examples-section">
-                    <span class="examples-label">EXAMPLES</span>
-                    <h4 class="examples-title">Basic example</h4>
-                    <p class="examples-desc">
-                        Use utilities like <code class="inline-code">font-thin</code> and <code class="inline-code">font-bold</code> to set the font weight of an element:
-                    </p>
-                    <div class="examples-card">
-                        <div class="example-row">
-                        <span class="example-label font-light">font-light</span>
-                        <span class="font-light text-lg">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label font-normal">font-normal</span>
-                        <span class="font-normal text-lg">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label font-medium">font-medium</span>
-                        <span class="font-medium text-lg">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label font-semibold">font-semibold</span>
-                        <span class="font-semibold text-lg">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                        <div class="example-row">
-                        <span class="example-label font-bold">font-bold</span>
-                        <span class="font-bold text-lg">The quick brown fox jumps over the lazy dog.</span>
-                        </div>
-                    </div>
-                    <pre class="examples-code">
-                    <code>
-                        &lt;p class="font-light"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="font-normal"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="font-medium"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="font-semibold"&gt;The quick brown fox ...&lt;/p&gt;
-                        &lt;p class="font-bold"&gt;The quick brown fox ...&lt;/p&gt;
-                    </code>
-                    </pre>
-                    </div>
-                </div>
-
-                <!-- Font Color -->
-                <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
-                    <div class="flex justify-center">
-                        <div>
-                        <span class="section-label">Typography</span>
-                        <h3 class="section-subtitle" style="margin: 0;">color</h3>
-                        <p class="section-desc">Utilities for controlling the text color of an element.</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-center">
-                        <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
-                    </div>
-                    </div>
-                    <div class="collapsible-content p-3">
-                    <table class="docs-table">
-                        <thead>
-                        <tr>
-                            <th>Class</th>
-                            <th>Styles</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr><td><span class="class-name">text-inherit</span></td><td><code>color: inherit;</code></td></tr>
-                        <tr><td><span class="class-name">text-current</span></td><td><code>color: currentColor;</code></td></tr>
-                        <tr><td><span class="class-name">text-transparent</span></td><td><code>color: transparent;</code></td></tr>
-                        <tr><td><span class="class-name">text-black</span></td><td><code>color: var(--color-black); /* #000 */</code></td></tr>
-                        <tr><td><span class="class-name">text-white</span></td><td><code>color: var(--color-white); /* #fff */</code></td></tr>
-                        </tbody>
-                    </table>
-                    <div class="examples-section">
-                        <span class="examples-label">EXAMPLES</span>
-                        <h4 class="examples-title">Basic example</h4>
-                        <p class="examples-desc">
-                        Use utilities like <code class="inline-code">text-[#00BCFF]</code> to set the color of an element:
-                        </p>
-                        <div class="examples-card">
-                        <p class="text-[#00BCFF] text-xl text-center">The quick brown fox jumps over the lazy dog.</p>
-                        </div>
-                        <pre class="examples-code text-center">
-                        <code>
-                            &lt;p class="text-[#00BCFF]"&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
-                        </code>
-                        </pre>
-                    </div>
-                </div>
- 
             </div>
         </section>
 
         <hr class="section-divider" />
 
-        <section class="flex flex-wrap gap-4 items-center">
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>Heading 4</h4>
-            <h5>Heading 5</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        <!-- Typography Section -->
+        <section>
+            <h2 class="mb-4">Typography</h2>
+
+            <!-- Headings -->
+            <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">heading</h3>
+                    <p class="section-desc">Default styles for heading elements (h1-h6).</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Element</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">h1</span></td><td><code>font-size: 2.5rem; <span class="code-comment">/* 40px */</span><br>font-weight: 700;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h2</span></td><td><code>font-size: 2rem; <span class="code-comment">/* 32px */</span><br>font-weight: 700;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h3</span></td><td><code>font-size: 1.75rem; <span class="code-comment">/* 28px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h4</span></td><td><code>font-size: 1.5rem; <span class="code-comment">/* 24px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h5</span></td><td><code>font-size: 1.25rem; <span class="code-comment">/* 20px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                    <tr><td><span class="class-name">h6</span></td><td><code>font-size: 1rem; <span class="code-comment">/* 16px */</span><br>font-weight: 600;<br>margin-bottom: 0.5rem;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Heading Examples</h4>
+                <p class="examples-desc">
+                    Use heading elements for titles and section headers:
+                </p>
+                <div class="examples-card">
+                    <div class="example-row">
+                    <span class="example-label">h1</span>
+                    <h1 style="margin:0">Heading Level 1</h1>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h2</span>
+                    <h2 style="margin:0">Heading Level 2</h2>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h3</span>
+                    <h3 style="margin:0">Heading Level 3</h3>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h4</span>
+                    <h4 style="margin:0">Heading Level 4</h4>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label">h5</span>
+                    <h5 style="margin:0">Heading Level 5</h5>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;h1&gt;Heading Level 1&lt;/h1&gt;
+                    &lt;h2&gt;Heading Level 2&lt;/h2&gt;
+                    &lt;h3&gt;Heading Level 3&lt;/h3&gt;
+                    &lt;h4&gt;Heading Level 4&lt;/h4&gt;
+                    &lt;h5&gt;Heading Level 5&lt;/h5&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Font Size -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font size section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">font-size</h3>
+                    <p class="section-desc">Utilities for controlling the font size of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">text-xs</span></td><td><code>font-size: var(--text-xs); <span class="code-comment">/* 0.75rem (12px) */</span><br>line-height: var(--text-xs-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-sm</span></td><td><code>font-size: var(--text-sm); <span class="code-comment">/* 0.875rem (14px) */</span><br>line-height: var(--text-sm-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-base</span></td><td><code>font-size: var(--text-base); <span class="code-comment">/* 1rem (16px) */</span><br>line-height: var(--text-base-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-lg</span></td><td><code>font-size: var(--text-lg); <span class="code-comment">/* 1.125rem (18px) */</span><br>line-height: var(--text-lg-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-xl</span></td><td><code>font-size: var(--text-xl); <span class="code-comment">/* 1.25rem (20px) */</span><br>line-height: var(--text-xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-2xl</span></td><td><code>font-size: var(--text-2xl); <span class="code-comment">/* 1.5rem (24px) */</span><br>line-height: var(--text-2xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-3xl</span></td><td><code>font-size: var(--text-3xl); <span class="code-comment">/* 1.875rem (30px) */</span><br>line-height: var(--text-3xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-4xl</span></td><td><code>font-size: var(--text-4xl); <span class="code-comment">/* 2.25rem (36px) */</span><br>line-height: var(--text-4xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-5xl</span></td><td><code>font-size: var(--text-5xl); <span class="code-comment">/* 3rem (48px) */</span><br>line-height: var(--text-5xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-6xl</span></td><td><code>font-size: var(--text-6xl); <span class="code-comment">/* 3.75rem (60px) */</span><br>line-height: var(--text-6xl-line-height);</code></td></tr>
+                    <tr><td><span class="class-name">text-7xl</span></td><td><code>font-size: var(--text-7xl); <span class="code-comment">/* 4.5rem (72px) */</span><br>line-height: var(--text-7xl-line-height);</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic example</h4>
+                <p class="examples-desc">
+                    Use utilities like <code class="inline-code">text-sm</code> and <code class="inline-code">text-lg</code> to set the font size of an element:
+                </p>
+                <div class="examples-card">
+                    <div class="example-row">
+                    <span class="example-label text-sm">text-sm</span>
+                    <span class="text-sm">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-base">text-base</span>
+                    <span class="text-base">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-lg">text-lg</span>
+                    <span class="text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-xl">text-xl</span>
+                    <span class="text-xl">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label text-2xl">text-2xl</span>
+                    <span class="text-2xl">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;p class="text-sm"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-base"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-lg"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-xl"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="text-2xl"&gt;The quick brown fox ...&lt;/p&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Font Weight -->
+            <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">font-weight</h3>
+                    <p class="section-desc">Utilities for controlling the font weight of an element.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">font-thin</span></td><td><code>font-weight: 100;</code></td></tr>
+                    <tr><td><span class="class-name">font-extralight</span></td><td><code>font-weight: 200;</code></td></tr>
+                    <tr><td><span class="class-name">font-light</span></td><td><code>font-weight: 300;</code></td></tr>
+                    <tr><td><span class="class-name">font-normal</span></td><td><code>font-weight: 400;</code></td></tr>
+                    <tr><td><span class="class-name">font-medium</span></td><td><code>font-weight: 500;</code></td></tr>
+                    <tr><td><span class="class-name">font-semibold</span></td><td><code>font-weight: 600;</code></td></tr>
+                    <tr><td><span class="class-name">font-bold</span></td><td><code>font-weight: 700;</code></td></tr>
+                    <tr><td><span class="class-name">font-extrabold</span></td><td><code>font-weight: 800;</code></td></tr>
+                    <tr><td><span class="class-name">font-black</span></td><td><code>font-weight: 900;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Basic example</h4>
+                <p class="examples-desc">
+                    Use utilities like <code class="inline-code">font-thin</code> and <code class="inline-code">font-bold</code> to set the font weight of an element:
+                </p>
+                <div class="examples-card">
+                    <div class="example-row">
+                    <span class="example-label font-light">font-light</span>
+                    <span class="font-light text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-normal">font-normal</span>
+                    <span class="font-normal text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-medium">font-medium</span>
+                    <span class="font-medium text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-semibold">font-semibold</span>
+                    <span class="font-semibold text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                    <div class="example-row">
+                    <span class="example-label font-bold">font-bold</span>
+                    <span class="font-bold text-lg">The quick brown fox jumps over the lazy dog.</span>
+                    </div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;p class="font-light"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-normal"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-medium"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-semibold"&gt;The quick brown fox ...&lt;/p&gt;
+                    &lt;p class="font-bold"&gt;The quick brown fox ...&lt;/p&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+
+            <!-- Font Color -->
+            <div class="font-weight-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle font weight section">
+                <div class="flex justify-center">
+                    <div>
+                    <span class="section-label">Typography</span>
+                    <h3 class="section-subtitle" style="margin: 0;">color</h3>
+                    <p class="section-desc">Utilities for controlling the text color of an element.</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+                </div>
+                <div class="collapsible-content p-3">
+                <table class="docs-table">
+                    <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Styles</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td><span class="class-name">text-black</span></td><td><code>color: var(--color-black); /* #000 */</code></td></tr>
+                    <tr><td><span class="class-name">text-white</span></td><td><code>color: var(--color-white); /* #fff */</code></td></tr>
+                    <tr><td><span class="class-name">text-primary</span></td><td><code>color: var(--color-primary);</code></td></tr>
+                    <tr><td><span class="class-name">text-secondary</span></td><td><code>color: var(--color-secondary);</code></td></tr>
+                    <tr><td><span class="class-name">text-danger</span></td><td><code>color: var(--color-danger);</code></td></tr>
+                    <tr><td><span class="class-name">text-success</span></td><td><code>color: var(--color-success);</code></td></tr>
+                    <tr><td><span class="class-name">text-info</span></td><td><code>color: var(--color-info);</code></td></tr>
+                    <tr><td><span class="class-name">text-dark</span></td><td><code>color: var(--color-dark);</code></td></tr>
+                    <tr><td><span class="class-name">text-light</span></td><td><code>color: var(--color-light);</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <h4 class="examples-title">Basic example</h4>
+                    <p class="examples-desc">
+                    Use utilities like <code class="inline-code">text-primary</code> to set the color of an element:
+                    </p>
+                    <div class="examples-card">
+                    <p class="text-primary text-xl text-center">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                    <pre class="examples-code text-center">
+                    <code>
+                        &lt;p class="text-primary"&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+                    </code>
+                    </pre>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Section Header</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-        </section>
+        <hr class="section-divider" />
 
         <section>
             <h2>Lists</h2>
