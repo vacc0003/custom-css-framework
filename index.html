@@ -37,8 +37,8 @@
                 <div class="flex justify-center">
                 <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
                 </div>
-                </div>
-                <div class="collapsible-content px-3 py-1">
+            </div>
+            <div class="collapsible-content px-3 py-1">
                 <table class="docs-table">
                 <thead>
                     <tr>
@@ -127,13 +127,13 @@
                     <div class="example-flex-direction-box">03</div>
                 </div>
                 <pre class="examples-code">
-<code>
-&lt;div class="flex flex-row ..."&gt;
-    &lt;div&gt;01&lt;/div&gt;
-    &lt;div&gt;02&lt;/div&gt;
-    &lt;div&gt;03&lt;/div&gt;
-&lt;/div&gt;
-</code>
+                    <code>
+                    &lt;div class="flex flex-row ..."&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                    &lt;/div&gt;
+                    </code>
                 </pre>
                 </div>
             </div>
@@ -213,13 +213,10 @@
                     <tr><td><span class="class-name">flex-auto</span></td><td><code>flex: 1 1 auto;</code></td></tr>
                     <tr><td><span class="class-name">flex-initial</span></td><td><code>flex: 0 1 auto;</code></td></tr>
                     <tr><td><span class="class-name">flex-none</span></td><td><code>flex: none;</code></td></tr>
-                    <tr><td><span class="class-name">flex-[value]</span></td><td><code>flex: &lt;value&gt;;</code></td></tr>
                     <tr><td><span class="class-name">grow</span></td><td><code>flex-grow: 1;</code></td></tr>
                     <tr><td><span class="class-name">grow-&lt;number&gt;</span></td><td><code>flex-grow: &lt;number&gt;;</code></td></tr>
-                    <tr><td><span class="class-name">grow-[value]</span></td><td><code>flex-grow: &lt;value&gt;;</code></td></tr>
                     <tr><td><span class="class-name">shrink</span></td><td><code>flex-shrink: 1;</code></td></tr>
                     <tr><td><span class="class-name">shrink-&lt;number&gt;</span></td><td><code>flex-shrink: &lt;number&gt;;</code></td></tr>
-                    <tr><td><span class="class-name">shrink-[value]</span></td><td><code>flex-shrink: &lt;value&gt;;</code></td></tr>
                 </tbody>
                 </table>
                 <div class="examples-section">
@@ -242,6 +239,437 @@
                     &lt;/div&gt;
                     </code>
                 </pre>
+                </div>
+            </div>
+            <!-- grid-template-columns -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-template-columns section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-template-columns</h3>
+                    <p class="section-desc">Utilities for specifying the columns in a grid layout.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">grid-cols-&lt;number&gt;</span></td><td><code>grid-template-columns: repeat(&lt;number&gt;, minmax(0, 1fr));</code></td></tr>
+                    <tr><td><span class="class-name">grid-cols-none</span></td><td><code>grid-template-columns: none;</code></td></tr>
+                    <tr><td><span class="class-name">grid-cols-subgrid</span></td><td><code>grid-template-columns: subgrid;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Specifying the grid columns</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">grid-cols-&lt;number&gt;</code> utilities like <code class="inline-code">grid-cols-2</code> and <code class="inline-code">grid-cols-4</code> to create grids with <em>n</em> equally sized columns:
+                </p>
+                <div class="examples-card grid grid-cols-4 gap-4 py-4">
+                    <div class="example-grid-box" style="background: #e879f9;">01</div>
+                    <div class="example-grid-box" style="background: #e879f9;">02</div>
+                    <div class="example-grid-box" style="background: #e879f9;">03</div>
+                    <div class="example-grid-box" style="background: #e879f9;">04</div>
+                    <div class="example-grid-box" style="background: #e879f9;">05</div>
+                    <div class="example-grid-box" style="background: #e879f9;">06</div>
+                    <div class="example-grid-box" style="background: #e879f9;">07</div>
+                    <div class="example-grid-box" style="background: #e879f9;">08</div>
+                    <div class="example-grid-box" style="background: #e879f9;">09</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="grid grid-cols-4 gap-4"&gt;
+                    &lt;div&gt;01&lt;/div&gt;
+                    &lt;!-- ... --&gt;
+                    &lt;div&gt;09&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- grid-column -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-column section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-column</h3>
+                    <p class="section-desc">Utilities for controlling how elements are sized and placed across grid columns.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">col-span-&lt;number&gt;</span></td><td><code>grid-column: span &lt;number&gt; / span &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">col-span-full</span></td><td><code>grid-column: 1 / -1;</code></td></tr>
+                    <tr><td><span class="class-name">col-start-&lt;number&gt;</span></td><td><code>grid-column-start: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">-col-start-&lt;number&gt;</span></td><td><code>grid-column-start: calc(&lt;number&gt; * -1);</code></td></tr>
+                    <tr><td><span class="class-name">col-start-auto</span></td><td><code>grid-column-start: auto;</code></td></tr>
+                    <tr><td><span class="class-name">col-end-&lt;number&gt;</span></td><td><code>grid-column-end: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">-col-end-&lt;number&gt;</span></td><td><code>grid-column-end: calc(&lt;number&gt; * -1);</code></td></tr>
+                    <tr><td><span class="class-name">col-end-auto</span></td><td><code>grid-column-end: auto;</code></td></tr>
+                    <tr><td><span class="class-name">col-auto</span></td><td><code>grid-column: auto;</code></td></tr>
+                    <tr><td><span class="class-name">col-&lt;number&gt;</span></td><td><code>grid-column: &lt;number&gt;;</code></td></tr>
+                    <tr><td><span class="class-name">-col-&lt;number&gt;</span></td><td><code>grid-column: calc(&lt;number&gt; * -1);</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Spanning columns</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">col-span-&lt;number&gt;</code> utilities like <code class="inline-code">col-span-2</code> and <code class="inline-code">col-span-4</code> to make an element span <em>n</em> columns:
+                </p>
+                <div class="examples-card grid grid-cols-3 gap-4 py-4">
+                    <div class="example-grid-box" style="background: #818cf8;">01</div>
+                    <div class="example-grid-box" style="background: #818cf8;">02</div>
+                    <div class="example-grid-box" style="background: #818cf8;">03</div>
+                    <div class="example-grid-box col-span-2" style="background: #818cf8;">04</div>
+                    <div class="example-grid-box" style="background: #818cf8;">05</div>
+                    <div class="example-grid-box" style="background: #818cf8;">06</div>
+                    <div class="example-grid-box col-span-2" style="background: #818cf8;">07</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+&lt;div class="grid grid-cols-3 gap-4"&gt;
+  &lt;div&gt;01&lt;/div&gt;
+  &lt;div&gt;02&lt;/div&gt;
+  &lt;div&gt;03&lt;/div&gt;
+  &lt;div class="col-span-2"&gt;04&lt;/div&gt;
+  &lt;div&gt;05&lt;/div&gt;
+  &lt;div&gt;06&lt;/div&gt;
+  &lt;div class="col-span-2"&gt;07&lt;/div&gt;
+&lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- grid-template-rows -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-template-rows section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-template-rows</h3>
+                    <p class="section-desc">Utilities for specifying the rows in a grid layout.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">grid-rows-&lt;number&gt;</span></td><td><code>grid-template-rows: repeat(&lt;number&gt;, minmax(0, 1fr));</code></td></tr>
+                    <tr><td><span class="class-name">grid-rows-none</span></td><td><code>grid-template-rows: none;</code></td></tr>
+                    <tr><td><span class="class-name">grid-rows-subgrid</span></td><td><code>grid-template-rows: subgrid;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                <span class="examples-label">EXAMPLES</span>
+                <h4 class="examples-title">Specifying the grid rows</h4>
+                <p class="examples-desc">
+                    Use <code class="inline-code">grid-rows-&lt;number&gt;</code> utilities like <code class="inline-code">grid-rows-2</code> and <code class="inline-code">grid-rows-4</code> to create grids with <em>n</em> equally sized rows:
+                </p>
+                <div class="examples-card grid grid-cols-3 grid-rows-4 gap-4 py-4"">
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">01</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">02</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">03</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">04</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">05</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">06</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">07</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">08</div>
+                    <div class="example-grid-box" style="background: #f6339a; color: #fff;">09</div>
+                </div>
+                <pre class="examples-code">
+                <code>
+                    &lt;div class="grid grid-cols-3 grid-rows-4 gap-4"&gt;
+                    &lt;div&gt;01&lt;/div&gt;
+                    &lt;!-- ... --&gt;
+                    &lt;div&gt;09&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+                </pre>
+                </div>
+            </div>
+            <!-- grid-row -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle grid-row section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">grid-row</h3>
+                    <p class="section-desc">Utilities for controlling how elements are sized and placed across grid rows.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">row-span-&lt;number&gt;</span></td><td><code>grid-row: span &lt;number&gt; / span &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">row-span-full</span></td><td><code>grid-row: 1 / -1;</code></td></tr>
+                        <tr><td><span class="class-name">row-start-&lt;number&gt;</span></td><td><code>grid-row-start: &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">-row-start-&lt;number&gt;</span></td><td><code>grid-row-start: calc(&lt;number&gt; * -1);</code></td></tr>
+                        <tr><td><span class="class-name">row-start-auto</span></td><td><code>grid-row-start: auto;</code></td></tr>
+                        <tr><td><span class="class-name">row-end-&lt;number&gt;</span></td><td><code>grid-row-end: &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">-row-end-&lt;number&gt;</span></td><td><code>grid-row-end: calc(&lt;number&gt; * -1);</code></td></tr>
+                        <tr><td><span class="class-name">row-end-auto</span></td><td><code>grid-row-end: auto;</code></td></tr>
+                        <tr><td><span class="class-name">row-auto</span></td><td><code>grid-row: auto;</code></td></tr>
+                        <tr><td><span class="class-name">row-&lt;number&gt;</span></td><td><code>grid-row: &lt;number&gt;;</code></td></tr>
+                        <tr><td><span class="class-name">-row-&lt;number&gt;</span></td><td><code>grid-row: calc(&lt;number&gt; * -1);</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Spanning rows</div>
+                    <div class="examples-desc">Use <code class="inline-code">row-span-&lt;number&gt;</code> utilities like <code class="inline-code">row-span-2</code> and <code class="inline-code">row-span-4</code> to make an element span <em>n</em> rows:</div>
+                <div class="examples-card">
+                        <div class="grid grid-flow-col grid-rows-3 gap-4">
+                            <div class="example-grid-box row-span-3" style="background: #E12BFB;">01</div>
+                            <div class="example-grid-box col-span-2 text-[#D04EE1]" style="background: #8A0194;">02</div>
+                            <div class="example-grid-box col-span-2 row-span-2" style="background: #E12BFB;">03</div>
+                    </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="grid grid-flow-col grid-rows-3 gap-4"&gt;
+                        &lt;div class="row-span-3 ..."&gt;01&lt;/div&gt;
+                        &lt;div class="col-span-2 ..."&gt;02&lt;/div&gt;
+                        &lt;div class="col-span-2 row-span-2 ..."&gt;03&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                    </div>
+                    </div>
+            <!-- gap -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle gap section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">gap</h3>
+                    <p class="section-desc">Utilities for controlling gutters between grid and flexbox items.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">gap-&lt;number&gt;</span></td><td><code>gap: calc(var(--spacing) * &lt;value&gt;);</code></td></tr>
+                        <tr><td><span class="class-name">gap-x-&lt;number&gt;</span></td><td><code>column-gap: calc(var(--spacing) * &lt;value&gt;);</code></td></tr>
+                        <tr><td><span class="class-name">gap-y-&lt;number&gt;</span></td><td><code>row-gap: calc(var(--spacing) * &lt;value&gt;);</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Basic example</div>
+                    <div class="examples-desc">Use <code class="inline-code">gap-&lt;number&gt;</code> utilities like <code class="inline-code">gap-2</code> and <code class="inline-code">gap-4</code> to change the gap between both rows and columns in grid and flexbox layouts:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="example-grid-box" style="background: #8A4FFF;">01</div>
+                            <div class="example-grid-box" style="background: #8A4FFF;">02</div>
+                            <div class="example-grid-box" style="background: #8A4FFF;">03</div>
+                            <div class="example-grid-box" style="background: #8A4FFF;">04</div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="grid grid-cols-2 gap-4"&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                        &lt;div&gt;04&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- justify-content -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle justify-content section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">justify-content</h3>
+                    <p class="section-desc">Utilities for controlling how flex and grid items are positioned along a container's main axis.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">justify-start</span></td><td><code>justify-content: flex-start;</code></td></tr>
+                        <tr><td><span class="class-name">justify-end</span></td><td><code>justify-content: flex-end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-end-safe</span></td><td><code>justify-content: safe flex-end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-center</span></td><td><code>justify-content: center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-center-safe</span></td><td><code>justify-content: safe center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-between</span></td><td><code>justify-content: space-between;</code></td></tr>
+                        <tr><td><span class="class-name">justify-around</span></td><td><code>justify-content: space-around;</code></td></tr>
+                        <tr><td><span class="class-name">justify-evenly</span></td><td><code>justify-content: space-evenly;</code></td></tr>
+                        <tr><td><span class="class-name">justify-stretch</span></td><td><code>justify-content: stretch;</code></td></tr>
+                        <tr><td><span class="class-name">justify-baseline</span></td><td><code>justify-content: baseline;</code></td></tr>
+                        <tr><td><span class="class-name">justify-normal</span></td><td><code>justify-content: normal;</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Start</div>
+                    <div class="examples-desc">Use the <code class="inline-code">justify-start</code> utility to justify items against the start of the container's main axis:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="flex justify-start gap-3">
+                            <div class="example-flex-direction-box" style="background: #E12BFB;">01</div>
+                            <div class="example-flex-direction-box" style="background: #E12BFB;">02</div>
+                            <div class="example-flex-direction-box" style="background: #E12BFB;">03</div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="flex justify-start ..."&gt;
+                        &lt;div&gt;01&lt;/div&gt;
+                        &lt;div&gt;02&lt;/div&gt;
+                        &lt;div&gt;03&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- justify-items -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle justify-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox & Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">justify-items</h3>
+                    <p class="section-desc">Utilities for controlling how grid items are aligned along their inline axis.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                    <thead>
+                        <tr><th>Class</th><th>Styles</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="class-name">justify-items-start</span></td><td><code>justify-items: start;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-end</span></td><td><code>justify-items: end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-end-safe</span></td><td><code>justify-items: safe end;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-center</span></td><td><code>justify-items: center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-center-safe</span></td><td><code>justify-items: safe center;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-stretch</span></td><td><code>justify-items: stretch;</code></td></tr>
+                        <tr><td><span class="class-name">justify-items-normal</span></td><td><code>justify-items: normal;</code></td></tr>
+                    </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Start</div>
+                    <div class="examples-desc">Use the <code class="inline-code">justify-items-start</code> utility to justify grid items against the start of their inline axis:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="grid grid-cols-3 grid-rows-2 gap-4 justify-items-start">
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">01</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">02</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">03</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">04</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">05</div></div>
+                            <div class="example-grid-cell"><div class="example-flex-direction-box" style="background: #22B6F6;">06</div></div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="grid grid-cols-3 grid-rows-2 gap-4 justify-items-start"&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;01&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;02&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;03&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;04&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;05&lt;/div&gt;&lt;/div&gt;
+                        &lt;div class="example-grid-cell"&gt;&lt;div class="example-flex-direction-box" style="background: #22B6F6;"&gt;06&lt;/div&gt;&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- align-items -->
+            <div class="font-size-toggle flex justify-between cursor-pointer gap-2 hover-bg transition-all duration-200 -mx-4 p-3 rounded-xl items-center" tabindex="0" aria-label="Toggle align-items section">
+                <div class="flex justify-center">
+                <div>
+                    <span class="section-label">Flexbox &amp; Grid</span>
+                    <h3 class="section-subtitle" style="margin: 0;">align-items</h3>
+                    <p class="section-desc">Utilities for controlling how flex and grid items are positioned along a container's cross axis.</p>
+                </div>
+                </div>
+                <div class="flex justify-center">
+                <span class="toggle-icon text-2xl px-1 opacity-25">⌄</span>
+                </div>
+            </div>
+            <div class="collapsible-content px-3 py-1">
+                <table class="docs-table">
+                <thead>
+                    <tr>
+                    <th>Class</th>
+                    <th>Styles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="class-name">items-start</span></td><td><code>align-items: flex-start;</code></td></tr>
+                    <tr><td><span class="class-name">items-end</span></td><td><code>align-items: flex-end;</code></td></tr>
+                    <tr><td><span class="class-name">items-end-safe</span></td><td><code>align-items: safe flex-end;</code></td></tr>
+                    <tr><td><span class="class-name">items-center</span></td><td><code>align-items: center;</code></td></tr>
+                    <tr><td><span class="class-name">items-center-safe</span></td><td><code>align-items: safe center;</code></td></tr>
+                    <tr><td><span class="class-name">items-baseline</span></td><td><code>align-items: baseline;</code></td></tr>
+                    <tr><td><span class="class-name">items-baseline-last</span></td><td><code>align-items: last baseline;</code></td></tr>
+                    <tr><td><span class="class-name">items-stretch</span></td><td><code>align-items: stretch;</code></td></tr>
+                </tbody>
+                </table>
+                <div class="examples-section">
+                    <span class="examples-label">EXAMPLES</span>
+                    <div class="examples-title">Stretch</div>
+                    <div class="examples-desc">Use the <code class="inline-code">items-stretch</code> utility to stretch items to fill the container's cross axis:</div>
+                    <div class="examples-card example-flex-wrap-bg">
+                        <div class="flex items-stretch gap-4">
+                            <div class="example-grid-box py-8" style="background: #22B6F6; justify-content: center; align-items: center;">01</div>
+                            <div class="example-grid-box py-8" style="background: #22B6F6;  justify-content: center; align-items: center;">02</div>
+                            <div class="example-grid-box py-8" style="background: #22B6F6;  justify-content: center; align-items: center;">03</div>
+                        </div>
+                    </div>
+                    <div class="examples-code">
+                        <pre><code>&lt;div class="flex items-stretch ..."&gt;
+                            &lt;div class="py-4"&gt;01&lt;/div&gt;
+                            &lt;div class="py-12"&gt;02&lt;/div&gt;
+                            &lt;div class="py-8"&gt;03&lt;/div&gt;
+                        &lt;/div&gt;</code></pre>
+                    </div>
                 </div>
             </div>
         </section>
@@ -430,8 +858,6 @@
                         <tr><td><span class="class-name">font-bold</span></td><td><code>font-weight: 700;</code></td></tr>
                         <tr><td><span class="class-name">font-extrabold</span></td><td><code>font-weight: 800;</code></td></tr>
                         <tr><td><span class="class-name">font-black</span></td><td><code>font-weight: 900;</code></td></tr>
-                        <tr><td><span class="class-name">font-(<custom-property>)</span></td><td><code>font-weight: var(&lt;custom-property&gt;);</code></td></tr>
-                        <tr><td><span class="class-name">font-[value]</span></td><td><code>font-weight: &lt;value&gt;;</code></td></tr>
                     </tbody>
                     </table>
                     <div class="examples-section">
@@ -501,7 +927,6 @@
                         <tr><td><span class="class-name">text-transparent</span></td><td><code>color: transparent;</code></td></tr>
                         <tr><td><span class="class-name">text-black</span></td><td><code>color: var(--color-black); /* #000 */</code></td></tr>
                         <tr><td><span class="class-name">text-white</span></td><td><code>color: var(--color-white); /* #fff */</code></td></tr>
-                        <tr><td><span class="class-name">text-[&lt;value&gt;]</span></td><td><code>color: &lt;value&gt;;</code></td></tr>
                         </tbody>
                     </table>
                     <div class="examples-section">

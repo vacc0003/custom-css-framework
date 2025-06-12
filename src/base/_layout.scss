@@ -207,6 +207,12 @@ $flex-wraps: (
     grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
   }
 }
+.grid-cols-none { grid-template-columns: none !important; }
+.grid-cols-subgrid { grid-template-columns: subgrid !important; }
+// Arbitrary value utility (static example)
+.grid-cols-\[value\] { grid-template-columns: value !important; }
+// Custom property utility (static example)
+.grid-cols-\(--custom-property\) { grid-template-columns: var(--custom-property) !important; }
 
 // Grid Col Spans, Grid Row Spans, Flex Grow
 @for $i from 1 through 12 {
@@ -218,6 +224,42 @@ $flex-wraps: (
   }
   .flex-grow-#{$i} {
     flex-grow: #{$i};
+  }
+}
+
+// Grid Column Span Full
+.col-span-full {
+  grid-column: 1 / -1 !important;
+}
+// Grid Column Span Custom Property (static example)
+.col-span-\(\) {
+  grid-column: span var(--custom-property) / span var(--custom-property) !important;
+}
+// Grid Column Span Arbitrary Value (static example)
+.col-span-\[value\] {
+  grid-column: span value / span value !important;
+}
+// Grid Column Start Utilities
+@for $i from 1 through 12 {
+  .col-start-#{$i} {
+    grid-column-start: #{$i} !important;
+  }
+}
+.col-start-auto {
+  grid-column-start: auto !important;
+}
+// Grid Column Start Custom Property (static example)
+.col-start-\(\) {
+  grid-column-start: var(--custom-property) !important;
+}
+// Grid Column Start Arbitrary Value (static example)
+.col-start-\[value\] {
+  grid-column-start: value !important;
+}
+// Grid Column End Utilities
+@for $i from 1 through 12 {
+  .col-end-#{$i} {
+    grid-column-end: #{$i} !important;
   }
 }
 
@@ -251,21 +293,18 @@ $self-alignments: (
   }
 }
 
-// Justify Content Utilities
-$justify-content: (
-  start: flex-start,
-  end: flex-end,
-  center: center,
-  between: space-between,
-  around: space-around,
-  evenly: space-evenly
-);
-
-@each $name, $value in $justify-content {
-  .justify-#{$name} {
-    justify-content: #{$value};
-  }
-}
+// Justify Content Utilities (extended)
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-end-safe { justify-content: safe flex-end !important; }
+.justify-center { justify-content: center !important; }
+.justify-center-safe { justify-content: safe center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+.justify-evenly { justify-content: space-evenly !important; }
+.justify-stretch { justify-content: stretch !important; }
+.justify-baseline { justify-content: baseline !important; }
+.justify-normal { justify-content: normal !important; }
 
 @each $key, $value in sizing.$spacing {
   .gap-#{$key} {
@@ -518,3 +557,111 @@ $justify-content: (
 .basis-7xl { flex-basis: var(--container-7xl) !important; }
 
 .flex-wrap-reverse { flex-wrap: wrap-reverse !important; }
+
+// Grid Column Utilities
+.col-auto {
+  grid-column: auto !important;
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: #{$i} !important;
+  }
+  .-col-#{$i} {
+    grid-column: calc(#{$i} * -1) !important;
+  }
+  .-col-start-#{$i} {
+    grid-column-start: calc(#{$i} * -1) !important;
+  }
+  .-col-end-#{$i} {
+    grid-column-end: calc(#{$i} * -1) !important;
+  }
+}
+// Arbitrary value utility (static example)
+.col-\[value\] {
+  grid-column: value !important;
+}
+
+// Grid Row Span Full
+.row-span-full {
+  grid-row: 1 / -1 !important;
+}
+// Grid Row Span Arbitrary Value (static example)
+.row-span-\[value\] {
+  grid-row: span value / span value !important;
+}
+// Grid Row Start Utilities
+@for $i from 1 through 12 {
+  .row-start-#{$i} {
+    grid-row-start: #{$i} !important;
+  }
+  .-row-start-#{$i} {
+    grid-row-start: calc(#{$i} * -1) !important;
+  }
+}
+.row-start-auto {
+  grid-row-start: auto !important;
+}
+// Grid Row Start Arbitrary Value (static example)
+.row-start-\[value\] {
+  grid-row-start: value !important;
+}
+// Grid Row End Utilities
+@for $i from 1 through 12 {
+  .row-end-#{$i} {
+    grid-row-end: #{$i} !important;
+  }
+  .-row-end-#{$i} {
+    grid-row-end: calc(#{$i} * -1) !important;
+  }
+}
+.row-end-auto {
+  grid-row-end: auto !important;
+}
+// Grid Row End Arbitrary Value (static example)
+.row-end-\[value\] {
+  grid-row-end: value !important;
+}
+// Grid Row Utilities
+.row-auto {
+  grid-row: auto !important;
+}
+@for $i from 1 through 12 {
+  .row-#{$i} {
+    grid-row: #{$i} !important;
+  }
+  .-row-#{$i} {
+    grid-row: calc(#{$i} * -1) !important;
+  }
+}
+// Arbitrary value utility (static example)
+.row-\[value\] {
+  grid-row: value !important;
+}
+
+// Grid Flow Utilities
+.grid-flow-row { grid-auto-flow: row !important; }
+.grid-flow-col { grid-auto-flow: column !important; }
+.grid-flow-row-dense { grid-auto-flow: row dense !important; }
+.grid-flow-col-dense { grid-auto-flow: column dense !important; }
+
+// Grid Rows Utilities
+@for $i from 1 through 12 {
+  .grid-rows-#{$i} {
+    grid-template-rows: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+.grid-rows-none { grid-template-rows: none !important; }
+.grid-rows-subgrid { grid-template-rows: subgrid !important; }
+// Arbitrary value utility (static example)
+.grid-rows-\[value\] { grid-template-rows: value !important; }
+// Custom property utility (static example)
+.grid-rows-\(--custom-property\) { grid-template-rows: var(--custom-property) !important; }
+
+// Justify Items Utilities
+.justify-items-start { justify-items: start !important; }
+.justify-items-end { justify-items: end !important; }
+.justify-items-end-safe { justify-items: safe end !important; }
+.justify-items-center { justify-items: center !important; }
+.justify-items-center-safe { justify-items: safe center !important; }
+.justify-items-stretch { justify-items: stretch !important; }
+.justify-items-normal { justify-items: normal !important; }

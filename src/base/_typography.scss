@@ -248,11 +248,9 @@ html[data-theme="dark"] .examples-code {
 .text-transparent { color: transparent !important; }
 .text-black { color: var(--color-black, #000) !important; }
 .text-white { color: var(--color-white, #fff) !important; }
-// Arbitrary value utility (for e.g. text-[#00BCFF])
-// This requires your build system to support arbitrary values, but for static CSS:
-// Example: .text-\[\#00BCFF\] { color: #00BCFF !important; }
-// You may need to generate these dynamically if you want full arbitrary value support.
-// For now, add a static example:
+
+// Arbitrary value utility 
 .text-\[\#00BCFF\] { color: #00BCFF !important; }
+.text-\[\#D04EE1\] { color: #D04EE1 !important; }
 
 .text-center { text-align: center !important; } 

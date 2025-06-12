@@ -213,9 +213,11 @@ html[data-theme="dark"] .examples-code {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.2rem 1rem;
+  width: 100%;
+  height: 100%;
   min-width: 0;
-  flex: 1 1 0%;
+  min-height: 0;
+  padding: 1.2rem 1rem;
   transition: background 0.2s;
 }
 
@@ -301,4 +303,23 @@ html[data-theme="dark"] .example-flex-wrap-bg::before {
   height: 60px;
   margin:  0;
   transition: background 0.2s;
+}
+
+.example-grid-cell {
+  background: #f7f8fa;
+  border: 1px solid #e3e6ee;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dark .example-grid-cell,
+[data-theme="dark"] .example-grid-cell {
+  background: #1C202A;
+  border: 1px solid #272E3D;
 }
