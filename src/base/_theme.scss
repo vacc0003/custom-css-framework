@@ -1,11 +1,9 @@
 @use '../variables/theme' as theme;
 
-// Apply theme to body
 body {
   @include theme.theme-colors;
 }
 
-// Theme toggle switch styles
 .theme-toggle {
   position: fixed;
   top: 1rem;

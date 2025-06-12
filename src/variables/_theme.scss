@@ -1,6 +1,5 @@
 @use './colors' as colors;
 
-// Theme system
 :root {
   --bg-color: #{colors.$bg-light};
   --text-color: #{colors.$text-light};
@@ -13,7 +12,6 @@
   --border-color: #{colors.$border-dark};
 }
 
-// Theme mixins
 @mixin theme-transition {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -25,7 +23,6 @@
   @include theme-transition;
 }
 
-// Theme colors
 $theme: (
   primary: colors.$cyan,
   secondary: colors.$lime,
@@ -36,7 +33,6 @@ $theme: (
   light: colors.$black,
 );
 
-// Lists
 $list-bullet: disc;
 $list-number: decimal;
 $list-alpha-lower: lower-alpha;

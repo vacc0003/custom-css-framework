@@ -1,4 +1,3 @@
-// Cursor utilities
 
 .cursor-default {
   cursor: default;
@@ -24,12 +23,10 @@
   cursor: help;
 }
 
-// Pointer events
 .pointer-events-none {
   pointer-events: none;
 }
 
-// Visibility
 .visible {
   visibility: visible;
 }
@@ -38,7 +35,6 @@
   visibility: hidden;
 }
 
-// Opacity
 .opacity-0 {
   opacity: 0;
 }
@@ -59,7 +55,6 @@
   opacity: 1;
 }
 
-// Border radius
 .rounded-none {
   border-radius: 0;
 }
@@ -96,7 +91,6 @@
   border-radius: 9999px;
 }
 
-// Individual corners
 .rounded-t-none {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -153,7 +147,6 @@
   border-bottom-left-radius: 0.25rem;
 }
 
-// Transitions
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -184,7 +177,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// Duration
 .duration-75 {
   transition-duration: 75ms;
 }
@@ -217,7 +209,6 @@
   transition-duration: 1000ms;
 }
 
-// Background colors with opacity
 @each $color, $value in (
   'white': #ffffff,
   'black': #000000,
@@ -234,7 +225,6 @@
   }
 }
 
-// Dark mode background colors
 @media (prefers-color-scheme: dark) {
   @each $color, $value in (
     'white': #000000,
@@ -253,7 +243,6 @@
   }
 }
 
-// Interactive states
 .hover {
   &:hover {
     opacity: 0.75;
@@ -273,7 +262,6 @@
   }
 }
 
-// Hover background colors with opacity
 @each $color, $value in (
   'white': #ffffff,
   'black': #000000
@@ -289,7 +277,6 @@
   }
 }
 
-// Dark mode hover background colors
 @media (prefers-color-scheme: dark) {
   @each $color, $value in (
     'white': #000000,
@@ -307,7 +294,6 @@
   }
 }
 
-// Z-index
 .z-0 {
   z-index: 0;
 }
@@ -336,7 +322,6 @@
   z-index: auto;
 }
 
-// Overflow
 .overflow-auto {
   overflow: auto;
 }
@@ -369,7 +354,6 @@
   overflow-y: hidden;
 }
 
-// Resize
 .resize-none {
   resize: none;
 }
@@ -386,7 +370,6 @@
   resize: horizontal;
 }
 
-// Text decoration
 .underline {
   text-decoration: underline;
 }
@@ -399,7 +382,6 @@
   text-decoration: none;
 }
 
-// Text transform
 .uppercase {
   text-transform: uppercase;
 }
@@ -416,7 +398,6 @@
   text-transform: none;
 }
 
-// Text overflow
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -431,7 +412,6 @@
   text-overflow: clip;
 }
 
-// Custom hover background using theme variables
 .hover-bg {
   &:hover {
     background-color: #F3F4F6 !important;
@@ -444,7 +424,6 @@
   }
 }
 
-// Background opacity utilities
 .bg-opacity-0    { --bg-opacity: 0 !important; }
 .bg-opacity-5    { --bg-opacity: 0.05 !important; }
 .bg-opacity-10   { --bg-opacity: 0.10 !important; }
@@ -461,10 +440,6 @@
 .bg-opacity-95   { --bg-opacity: 0.95 !important; }
 .bg-opacity-100  { --bg-opacity: 1 !important; }
 
-// To use, set background-color with rgba and var(--bg-opacity), e.g.:
-// background-color: rgba(34, 182, 246, var(--bg-opacity));
-
-// Box sizing utilities
 .box-border { box-sizing: border-box !important; }
 .box-content { box-sizing: content-box !important; }
 

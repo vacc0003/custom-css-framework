@@ -228,7 +228,7 @@ html[data-theme="dark"] .examples-code {
   background: #18181b;
 }
 
-// Font weight utilities
+
 .font-thin { font-weight: 100 !important; }
 .font-extralight { font-weight: 200 !important; }
 .font-light { font-weight: 300 !important; }
@@ -238,18 +238,13 @@ html[data-theme="dark"] .examples-code {
 .font-bold { font-weight: 700 !important; }
 .font-extrabold { font-weight: 800 !important; }
 .font-black { font-weight: 900 !important; }
-// Custom property and arbitrary value
-.font-\(\<custom-property\>\) { font-weight: var(--custom-property) !important; }
-.font-\[value\] { font-weight: var(--value) !important; }
 
-// Text color utilities
 .text-inherit { color: inherit !important; }
 .text-current { color: currentColor !important; }
 .text-transparent { color: transparent !important; }
 .text-black { color: var(--color-black, #000) !important; }
 .text-white { color: var(--color-white, #fff) !important; }
 
-// Arbitrary value utility 
 .text-\[\#00BCFF\] { color: #00BCFF !important; }
 .text-\[\#D04EE1\] { color: #D04EE1 !important; }
 
